@@ -126,8 +126,6 @@ def vim [] { nvim }
 
 source ~/.zoxide.nu
 
-source ~/.local/share/atuin/init.nu
-
 alias fuck = with-env {TF_ALIAS: "fuck", PYTHONIOENCODING: "utf-8"} {
   thefuck (history | last 1 | get command.0)
 }

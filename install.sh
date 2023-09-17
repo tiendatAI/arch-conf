@@ -3,9 +3,6 @@
 # This script will install this following packages:
 # nix
 # nvimchad (for chad)
-# zellij
-# nushell
-# ranger -> or joshuto
 # nerd fonts
 # catppuncin
 # And reconfig starship
@@ -17,19 +14,19 @@
 # +discord
 #
 # Add more some shell tools:
-# bat
+# bat 
 # fd
 # zoxide
 # zellij
-# atuin
+# joshuto
 # ripgrep
+# exa 
+# fuck
+# dust
+# Ag
+# tldr
 #
-#
-# Add more binding for non-laptop keyboards  
-# volume
-# brighness
-# nightlight
-
+# Install config for firefox and cron
 
 # function to install almost packages
 safe_install() {
@@ -46,11 +43,13 @@ safe_install() {
 }
 
 
+
 #INSTALL NECESSARY PACKAGES 
 
 #some good fonts
-#yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
-#yay -S ttf-sourcecodepro-nerd
+#yay -Syu noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+#yay -Syu ttf-sourcecodepro-nerd
+#yay -Syu ttf-ms-win11-auto
 
 
 # nvim
@@ -88,25 +87,25 @@ rm -rf temp
 
 
 ############ desktop apps ############
-safe_install "pdf viewer" "evince" "yay -S evince"
-safe_install "discord" "discord" "yay -S discord"
-safe_install "spotify" "spotify" "yay -S spotify"
-safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -S wl-gammarelay"
+safe_install "pdf viewer" "evince" "yay -Syu evince"
+safe_install "libreoffice" "libreoffice" "yay -Syu libreoffice-still"
+safe_install "discord" "discord" "yay -Syu discord"
+safe_install "spotify" "spotify" "yay -Syu spotify"
+safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -Syu wl-gammarelay"
 
 
 ############ shell tools ############
-safe_install "bat : alternative of cat" "bat" "yay -S bat"
-safe_install "fd: alternative of find" "fd" "yay -S fd"
-safe_install "zoxide: alternative of cd" "z" "yay -S zoxide"
-safe_install "zellij: alternative of tmux" "zellij" "yay -S zellij"
-safe_install "joshuto: terminal file manager" "joshuto" "yay -S joshuto"
-safe_install "ripgrep: recursively searches directories" "rg" "yay -S ripgrep"
-# safe_install "atuin: shell history" "" "yay -S atuin"
-safe_install "exa: A modern replacement for ls" "exa" "yay -S exa"
-safe_install "fuck: corrects your previous console command" "fuck" "yay -S thefuck"
-safe_install "dust: A more intuitive version of du in rust" "dust" "yay -S dust"
-safe_install "Ag: A code-searching tool similar to ack, but faster" "ag" "yay -S the_silver_searcher"
-safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay -S tldr"
+safe_install "bat : alternative of cat" "bat" "yay -Syu bat"
+safe_install "fd: alternative of find" "fd" "yay -Syu fd"
+safe_install "zoxide: alternative of cd" "z" "yay -Syu zoxide"
+safe_install "zellij: alternative of tmux" "zellij" "yay -Syu zellij"
+safe_install "joshuto: terminal file manager" "joshuto" "yay -Syu joshuto"
+safe_install "ripgrep: recursively searches directories" "rg" "yay -Syu ripgrep"
+safe_install "exa: A modern replacement for ls" "exa" "yay -Syu exa"
+safe_install "fuck: corrects your previous console command" "fuck" "yay -Syu thefuck"
+safe_install "dust: A more intuitive version of du in rust" "dust" "yay -Syu dust"
+safe_install "Ag: A code-searching tool similar to ack, but faster" "ag" "yay -Syu the_silver_searcher"
+safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay -Syu tldr"
 
 
 ############ wallpaper ############
@@ -124,18 +123,5 @@ cp ./home-manager/nushell/config.nu ~/.config/nushell
 cp ./home-manager/bash/.bashrc ~/
 
 
-# Great power comes great responsibility
-############ nix ############
-# safe_install "nix packkage manager" "nix" "sh <(curl -L https://nixos.org/nix/install) --daemon"
-
-# #install home-manager(23.11)
-# nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
-# nix-channel --update
-
-# nix-shell '<home-manager>' -A install
-
-# and following this turorial to enable home-manager:
-# https://nix-community.github.io/home-manager/index.html#sec-flakes-standalone
-
-# copy file config
-# cp -r ./home-manager/* ~/.config/home-manager/
+# firefox config
+sudo cp -r ./firefox/ /etc/
