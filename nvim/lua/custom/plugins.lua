@@ -33,6 +33,12 @@ local plugins = {
     config = overrides.nvim_dap_virtual_text.config
   },
 
+  -- AI suggest 
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
+
   -- python
   {
     "mfussenegger/nvim-dap-python",
