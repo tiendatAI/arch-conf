@@ -133,7 +133,7 @@ cp ./home-manager/bash/.bashrc ~/
 #nvim config
 cp -r ./nvim/lua/custom ~/.config/nvim/lua/
 echo "require('neoscroll').setup()" >> ~/.config/nvim/lua/plugins/init.lua
-echo "require("nvim-surround").setup()" >> ~/.config/nvim/lua/plugins/init.lua
+echo "require('nvim-surround').setup()" >> ~/.config/nvim/lua/plugins/init.lua
 echo "require('leap').add_default_mappings()" >> ~/.config/nvim/lua/plugins/init.lua
 
 # firefox config

@@ -125,6 +125,7 @@ $env.config = {
 
 #nvim
 def vim [] { nvim }
+def vi [] { nvim }
 
 #zoxide
 source ~/.zoxide.nu

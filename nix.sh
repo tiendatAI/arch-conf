@@ -27,6 +27,8 @@ nix-shell '<home-manager>' -A install
 
 # and following this turorial to enable home-manager:
 # https://nix-community.github.io/home-manager/index.html#sec-flakes-standalone
+nix run --extra-experimental-features "nix-command flakes" home-manager/master -- init --switch
 
 # copy file config
-#cp -r ./home-manager/* ~/.config/home-manager/
+cp -r ./home-manager/* ~/.config/home-manager/
+home-manager switch
