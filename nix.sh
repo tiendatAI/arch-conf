@@ -34,4 +34,4 @@ cp -r ./home-manager/* ~/.config/home-manager/
 home-manager switch
 
 # Add flake and nix-command in config
-echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+sudo echo "experimental-features = nix-command flakes" >> /etc/nix/nix.conf
