@@ -121,11 +121,17 @@ $env.config = {
 }
 
 
-# add more config
+### add more config
+
+#nvim
 def vim [] { nvim }
 
+#zoxide
 source ~/.zoxide.nu
 
+#thefuck
 alias fuck = with-env {TF_ALIAS: "fuck", PYTHONIOENCODING: "utf-8"} {
   thefuck (history | last 1 | get command.0)
 }
+
+

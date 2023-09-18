@@ -76,6 +76,28 @@ local plugins = {
     opts = overrides.nvim_cmp.opts,
   },
 
+  -- smooth scroll
+  {
+    "karb94/neoscroll.nvim",
+  },
+
+  -- surround 
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+  },
+
+  -- leap
+  {
+    "ggandor/leap.nvim", -- https://github.com/gggandor
+  },
+
   -- default in nvchad 
   {
     "neovim/nvim-lspconfig",

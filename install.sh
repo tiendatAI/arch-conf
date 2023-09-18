@@ -106,6 +106,14 @@ safe_install "fuck: corrects your previous console command" "fuck" "yay -Syu the
 safe_install "dust: A more intuitive version of du in rust" "dust" "yay -Syu dust"
 safe_install "Ag: A code-searching tool similar to ack, but faster" "ag" "yay -Syu the_silver_searcher"
 safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay -Syu tldr"
+# safe_install "atuin: history shell" "atuin" "yay -Syu atuin"
+
+# requirement step for zoxide
+echo "zoxide init nushell | save -f ~/.zoxide.nu" >> ~/.config/nushell/env.nu
+
+# #requirement step for atuin
+# mkdir ~/.local/share/atuin/
+# atuin init nu | save ~/.local/share/atuin/init.nu
 
 
 ############ wallpaper ############
@@ -122,6 +130,13 @@ cp ./hyprland/hyprland.conf ~/.config/hypr/
 cp ./home-manager/nushell/config.nu ~/.config/nushell
 cp ./home-manager/bash/.bashrc ~/
 
+#nvim config
+cp -r ./nvim/lua/custom ~/.config/nvim/lua/
+echo "require('neoscroll').setup()" >> ~/.config/nvim/lua/plugins/init.lua
+echo "require("nvim-surround").setup()" >> ~/.config/nvim/lua/plugins/init.lua
+echo "require('leap').add_default_mappings()" >> ~/.config/nvim/lua/plugins/init.lua
 
 # firefox config
 sudo cp -r ./firefox/ /etc/
+
+
