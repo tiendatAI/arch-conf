@@ -32,3 +32,6 @@ nix run --extra-experimental-features "nix-command flakes" home-manager/master -
 # copy file config
 cp -r ./home-manager/* ~/.config/home-manager/
 home-manager switch
+
+# Add flake and nix-command in config
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
