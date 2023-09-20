@@ -95,13 +95,12 @@ local plugins = {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    config = overrides.nvim_surround.config,
   },
 
   -- leap
   {
     "ggandor/leap.nvim", -- https://github.com/gggandor
-    config = overrides.leap.config,
+    init = overrides.leap.init,
   },
 
   -- default in nvchad 
