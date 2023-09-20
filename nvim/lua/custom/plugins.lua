@@ -39,6 +39,16 @@ local plugins = {
     event = 'BufEnter'
   },
 
+  -- mark code
+  {
+    'chentoast/marks.nvim',
+  },
+
+  -- harpoon -> better explore
+  -- {
+  --
+  -- },
+
   -- python
   {
     "mfussenegger/nvim-dap-python",
