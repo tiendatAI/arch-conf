@@ -125,6 +125,10 @@ cp ./v3-background-dark.jpg ~/.config/HyprV/backgrounds/
 cp ./hyprland/hyprland.conf ~/.config/hypr/
 
 
+############# reconfig zellij ############
+cp -r ./zellij/ ~/.config/
+
+
 #requirement steps
 # uncomment for coppy config file
 cp ./home-manager/nushell/config.nu ~/.config/nushell
@@ -132,7 +136,6 @@ cp ./home-manager/bash/.bashrc ~/
 
 #nvim config
 cp -r ./nvim/lua/custom ~/.config/nvim/lua/
-echo "$(./nvim/lua/echo_init.lua)" >> ~/.config/nvim/lua/plugins/init.lua
 
 # firefox config
 sudo cp -r ./firefox/ /etc/

@@ -39,13 +39,6 @@ local plugins = {
     event = 'BufEnter'
   },
 
-  -- mark project (better than commonly mark) 
-  {
-    "nvim-lua/plenary.nvim",
-  },
-  {
-    "ThePrimeagen/harpoon",
-  },
 
   -- python
   {

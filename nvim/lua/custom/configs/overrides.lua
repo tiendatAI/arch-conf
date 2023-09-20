@@ -100,7 +100,6 @@ M.leap = {
 }
 
 
-
 -- git support in nvimtree
 M.nvimtree = {
   git = {
