@@ -87,6 +87,37 @@ M.mason = {
   },
 }
 
+M.neoscroll = {
+  init = function(_)
+    require("neoscroll").setup()
+  end,
+}
+
+M.leap = {
+  config = function (_)
+    require('leap').add_default_mappings()
+  end,
+}
+
+M.nvim_surround = {
+  config = function (_)
+    require('nvim-surround').setup({
+      keymaps = {
+        insert          = '<C-g>z',
+        insert_line     = 'gC-ggZ',
+        normal          = 'gz',
+        normal_cur      = 'gZ',
+        normal_line     = 'gzgz',
+        normal_cur_line = 'gZgZ',
+        visual          = 'gz',
+        visual_line     = 'gZ',
+        delete          = 'gzd',
+        change          = 'gzc',
+      }
+    })
+  end,
+}
+
 -- git support in nvimtree
 M.nvimtree = {
   git = {
@@ -102,5 +133,7 @@ M.nvimtree = {
     },
   },
 }
+
+
 
 return M

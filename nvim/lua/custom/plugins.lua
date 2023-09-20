@@ -39,15 +39,13 @@ local plugins = {
     event = 'BufEnter'
   },
 
-  -- mark code
+  -- mark project (better than commonly mark) 
   {
-    'chentoast/marks.nvim',
+    "nvim-lua/plenary.nvim",
   },
-
-  -- harpoon -> better explore
-  -- {
-  --
-  -- },
+  {
+    "ThePrimeagen/harpoon",
+  },
 
   -- python
   {
@@ -89,6 +87,7 @@ local plugins = {
   -- smooth scroll
   {
     "karb94/neoscroll.nvim",
+    init = overrides.neoscroll.init,
   },
 
   -- surround 
@@ -96,16 +95,13 @@ local plugins = {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
+    config = overrides.nvim_surround.config,
   },
 
   -- leap
   {
     "ggandor/leap.nvim", -- https://github.com/gggandor
+    config = overrides.leap.config,
   },
 
   -- default in nvchad 
