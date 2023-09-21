@@ -135,6 +135,10 @@ cp ./hyprland/hyprland.conf ~/.config/hypr/
 cp -r ./zellij/ ~/.config/
 
 
+############# reconfig kitty ############
+cp -r ./kitty ~/.config/
+
+
 #requirement steps
 # uncomment for coppy config file
 cp ./home-manager/nushell/config.nu ~/.config/nushell
