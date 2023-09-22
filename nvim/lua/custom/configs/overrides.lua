@@ -49,6 +49,22 @@ M.nvim_cmp = {
   end,
 }
 
+M.harpoon = {
+  init = function()
+    require("harpoon").setup()
+
+    local ui = require("harpoon.ui")
+
+    vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+    vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+    vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
+    vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
+    vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+
+    require("core.utils").load_mappings("harpoon")
+  end,
+}
+
 M.treesitter = {
   ensure_installed = {
     "vim",
@@ -126,6 +142,13 @@ M.noice = {
         lsp_doc_border = false, -- add a border to hover docs and signature help
       },
     })
+  end
+}
+
+M.codeium = {
+  event = 'BufEnter',
+  init = function ()
+    vim.keymap.set('i', '<c-a>', function () return vim.fn['codeium#Accept']() end, { expr = true })
   end
 }
 

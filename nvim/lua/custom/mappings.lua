@@ -60,4 +60,18 @@ M.dap_python = {
 }
 
 
+M.harpoon= {
+  plugin = true,
+  n = {
+    ["<leader>a"] = {
+      function()
+        require("harpoon.mark").add_file()
+        -- vim.keymap.set("n", "<leader>a", mark.add_file)
+      end,
+      "Harpoon add file"
+    }
+  }
+}
+
+
 return M

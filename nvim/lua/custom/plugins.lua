@@ -36,9 +36,9 @@ local plugins = {
   -- AI suggest 
   {
     'Exafunction/codeium.vim',
-    event = 'BufEnter',
+    event = overrides.codeium.event,
+    init = overrides.codeium.init,
   },
-
   -- better command line
   {
     'MunifTanjim/nui.nvim',
@@ -67,6 +67,15 @@ local plugins = {
   {
     'jdhao/better-escape.vim',
     event = 'InsertEnter',
+  },
+
+  --better manage project
+  {
+    'nvim-lua/plenary.nvim'
+  },
+  {
+    'ThePrimeagen/harpoon',
+    init = overrides.harpoon.init,
   },
 
   -- python
@@ -99,17 +108,10 @@ local plugins = {
     init = overrides_rs.rust_lang.init,
   },
 
-
   --atuo complete
   {
     "hrsh7th/nvim-cmp",
     opts = overrides.nvim_cmp.opts,
-  },
-
-  -- smooth scroll
-  {
-    "karb94/neoscroll.nvim",
-    init = overrides.neoscroll.init,
   },
 
   -- surround 
