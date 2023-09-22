@@ -39,4 +39,6 @@ vim.cmd("set guifont=Intel\\ One\\ Mono:h12") -- Set the font size as desired
 
 
 -- codeium 
-vim.keymap.set('i', '<C-;>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+vim.keymap.set('i', '<c-a>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+
+
