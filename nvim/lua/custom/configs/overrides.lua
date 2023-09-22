@@ -147,5 +147,4 @@ M.nvimtree = {
 }
 
 
-
 return M

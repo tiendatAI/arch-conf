@@ -36,7 +36,7 @@ local plugins = {
   -- AI suggest 
   {
     'Exafunction/codeium.vim',
-    event = 'BufEnter'
+    event = 'BufEnter',
   },
 
   -- better command line
