@@ -39,6 +39,35 @@ local plugins = {
     event = 'BufEnter'
   },
 
+  -- better command line
+  {
+    'MunifTanjim/nui.nvim',
+  },
+  {
+    'rcarriga/nvim-notify',
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    },
+    init = overrides.noice.init,
+  },
+
+  --beter escape
+  {
+    'jdhao/better-escape.vim',
+    event = 'InsertEnter',
+  },
 
   -- python
   {
@@ -57,17 +86,17 @@ local plugins = {
     ft = overrides_rs.rust_tools.ft,
     dependencies = "neovim/nvim-lspconfig",
     opts = overrides_rs.rust_tools.opts,
-    config = overrides_rs.rust_tools.config,  
+    config = overrides_rs.rust_tools.config,
   },
   {
     'saecki/crates.nvim',
     ft = overrides_rs.crates.ft,
-    config = overrides_rs.crates.config,  
+    config = overrides_rs.crates.config,
   },
   {
     "rust-lang/rust.vim",
     ft = overrides_rs.rust_lang.ft,
-    init = overrides_rs.rust_lang.init,   
+    init = overrides_rs.rust_lang.init,
   },
 
 
