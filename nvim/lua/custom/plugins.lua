@@ -15,7 +15,6 @@ local plugins = {
     init = overrides.nvim_dap.init,
     config = overrides.nvim_dap.config,
   },
-
   -- dont make mistake
   {
     "jay-babu/mason-nvim-dap.nvim",
@@ -39,6 +38,7 @@ local plugins = {
     'Exafunction/codeium.vim',
     event = 'BufEnter'
   },
+
 
   -- python
   {
@@ -69,6 +69,7 @@ local plugins = {
     ft = overrides_rs.rust_lang.ft,
     init = overrides_rs.rust_lang.init,   
   },
+
 
   --atuo complete
   {
