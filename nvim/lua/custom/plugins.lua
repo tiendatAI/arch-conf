@@ -78,6 +78,12 @@ local plugins = {
     init = overrides.harpoon.init,
   },
 
+  --mason-tool-installer.nvim 
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    init = overrides.mason_installer.init,
+  },
+
   -- python
   {
     "mfussenegger/nvim-dap-python",
@@ -146,10 +152,10 @@ local plugins = {
   },
 
   -- override plugin configs
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason
-  },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = overrides.mason
+  -- },
 
   {
     "nvim-treesitter/nvim-treesitter",

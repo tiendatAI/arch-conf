@@ -81,27 +81,34 @@ M.treesitter = {
   },
 }
 
-M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
+M.mason_installer = {
+  init = function ()
+    require('mason-tool-installer').setup {
+      ensure_installed = {
+        -- lua stuff
+        "lua-language-server",
+        "stylua",
 
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
-    "codelldb",
+        -- c/cpp stuff
+        "clangd",
+        "clang-format",
+        "codelldb",
 
-    -- python
-    "black",
-    "debugpy",
-    "mypy",
-    "ruff",
-    "pyright",
+        -- python
+        "black",
+        "debugpy",
+        "mypy",
+        "ruff",
+        "pyright",
 
-    -- rust
-     "rust-analyzer",
-  },
+        -- rust
+        "rust-analyzer",
+
+        --other lsp
+        'bash-language-server',
+    },
+  }
+  end
 }
 
 M.neoscroll = {

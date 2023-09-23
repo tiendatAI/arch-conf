@@ -38,6 +38,3 @@ vim.keymap.set("x", "gS", "<Plug>VgSurround")
 vim.cmd("set guifont=Intel\\ One\\ Mono:h12") -- Set the font size as desired
 
 
-
-
-
