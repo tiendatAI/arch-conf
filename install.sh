@@ -106,7 +106,7 @@ safe_install "fuck: corrects your previous console command" "fuck" "yay -S thefu
 safe_install "dust: A more intuitive version of du in rust" "dust" "yay -S dust"
 safe_install "Ag: A code-searching tool similar to ack, but faster" "ag" "yay -S the_silver_searcher"
 safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay -S tldr"
-# safe_install "atuin: history shell" "atuin" "yay -S atuin"
+safe_install "atuin: history shell" "atuin" "yay -S atuin"
 
 
 
@@ -118,8 +118,8 @@ exit 0
 echo "zoxide init nushell | save -f ~/.zoxide.nu" >> ~/.config/nushell/env.nu
 
 # #requirement step for atuin
-# mkdir ~/.local/share/atuin/
-# atuin init nu | save ~/.local/share/atuin/init.nu
+mkdir ~/.local/share/atuin/
+atuin init nu | save ~/.local/share/atuin/init.nu
 
 
 ############ wallpaper ############
