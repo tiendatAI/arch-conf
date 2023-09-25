@@ -3,12 +3,13 @@
 # This script will install this following packages:
 # nix
 # nvimchad (for chad)
+# doom emacs (for better chad)
 # nerd fonts
 # catppuncin
 # And reconfig starship
 #
 # desktop apps:
-# +pdfviewer
+# +nyxt
 # +office
 # +spotify
 # +discord
@@ -18,7 +19,6 @@
 # fd
 # zoxide
 # zellij
-# joshuto
 # ripgrep
 # exa 
 # fuck
@@ -26,7 +26,7 @@
 # Ag
 # tldr
 #
-# Install config for firefox and cron
+# Install config for firefox 
 
 # function to install almost packages
 safe_install() {
@@ -48,13 +48,17 @@ safe_install() {
 
 #some good fonts
 #yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
-#yay -S ttf-intel-one-mono
+#yay -S ttf-intel-one-mono ttf-nerd-fonts-symbols
 #yay -S ttf-ms-win11-auto
 
 
 # nvim
 safe_install "neovim: text editor" "nvim" "yay -S neovim"
 # echo 'aslias vim=nvim' >> ~/.bashrc
+
+############ doom emacs ############
+# yay -S emacs-nativecomp
+
 
 # ############ nvchad ############
 mv ~/.config/nvim ~/.config/nvim.backup
@@ -88,6 +92,7 @@ rm -rf temp
 
 ############ desktop apps ############
 safe_install "pdf viewer" "evince" "yay -S evince"
+safe_install "emacs browser" "nyxt" "yay -S nyxt"
 safe_install "libreoffice" "libreoffice" "yay -S libreoffice-still"
 safe_install "discord" "discord" "yay -S discord"
 safe_install "spotify" "spotify" "yay -S spotify"
@@ -109,45 +114,5 @@ safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay 
 safe_install "atuin: history shell" "atuin" "yay -S atuin"
 
 
-
-############ coppy config file l############
-echo "You should init some apps and move to next step"
-exit 0
-
-# requirement step for zoxide
-echo "zoxide init nushell | save -f ~/.zoxide.nu" >> ~/.config/nushell/env.nu
-
-# #requirement step for atuin
-mkdir ~/.local/share/atuin/
-atuin init nu | save ~/.local/share/atuin/init.nu
-
-
-############ wallpaper ############
-cp ./v3-background-dark.jpg ~/.config/HyprV/backgrounds/
-
-
-############ reconfig hyprland ############
-# uncomment this to use fullscreen feature
-cp ./hyprland/hyprland.conf ~/.config/hypr/
-
-
-############# reconfig zellij ############
-cp -r ./zellij/ ~/.config/
-
-
-############# reconfig kitty ############
-cp -r ./kitty ~/.config/
-
-
-#requirement steps
-# uncomment for coppy config file
-cp ./home-manager/nushell/config.nu ~/.config/nushell
-cp ./home-manager/bash/.bashrc ~/
-
-#nvim config
-cp -r ./nvim/lua/custom ~/.config/nvim/lua/
-
-# firefox config
-sudo cp -r ./firefox/ /etc/
 
 
