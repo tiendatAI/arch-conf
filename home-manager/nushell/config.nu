@@ -126,6 +126,7 @@ $env.config = {
 #nvim
 def vim [] { nvim }
 def vi [] { nvim }
+def nv [] { nvim }
 
 #zoxide
 source ~/.zoxide.nu
@@ -135,8 +136,13 @@ alias fuck = with-env {TF_ALIAS: "fuck", PYTHONIOENCODING: "utf-8"} {
   thefuck (history | last 1 | get command.0)
 }
 
+#atuin
 $env.config = {
     show_banner: false
     keybindings: []
 }
 source ~/.local/share/atuin/init.nu
+
+#doom emacs
+$env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin")
+# def emacs [] { emacsclient -c -a 'emacs' }
