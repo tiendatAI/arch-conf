@@ -14,6 +14,8 @@
 # +spotify
 # +discord
 #
+# cmake
+#
 # Add more some shell tools:
 # bat 
 # fd
@@ -88,6 +90,10 @@ echo "$startup_nu" >> ~/.bashrc
 git clone https://github.com/catppuccin/starship.git temp
 cd ./temp/ && cp ./starship.toml ~/.config/ && cd ../
 rm -rf temp
+
+
+############ cmd tools############
+safe_install "cmake" "cmake" "yay -S cmake"
 
 
 ############ desktop apps ############
