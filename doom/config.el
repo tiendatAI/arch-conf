@@ -98,3 +98,9 @@
 (setq interprogram-paste-function 'wl-paste)
 
 
+;; duckduckgo
+(setq load-path (cons "./duckduckgo" load-path))
+(require 'ddg)
+(require 'ddg-search)
+(require 'ddg-mode)
+
