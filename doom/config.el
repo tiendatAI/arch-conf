@@ -21,7 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Intel One Mono" :size 17))
+(setq doom-font (font-spec :family "Intel One Mono" :size 15))
+;; (setq doom-font (font-spec :family "Intel One Mono" :size 17))
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -77,30 +78,49 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;;dired
+;; default dired
 (setq projectile-project-search-path '("~/Workplaces/"))
 
-;;clipboard
-;; credit: yorickvP on Github
-(setq wl-copy-process nil)
-(defun wl-copy (text)
-  (setq wl-copy-process (make-process :name "wl-copy"
-                                      :buffer nil
-                                      :command '("wl-copy" "-f" "-n")
-                                      :connection-type 'pipe))
-  (process-send-string wl-copy-process text)
-  (process-send-eof wl-copy-process))
-(defun wl-paste ()
-  (if (and wl-copy-process (process-live-p wl-copy-process))
-      nil ; should return nil if we're the current paste owner
-      (shell-command-to-string "wl-paste -n | tr -d \r")))
-(setq interprogram-cut-function 'wl-copy)
-(setq interprogram-paste-function 'wl-paste)
+;; beacon-mode
+(beacon-mode 1)
 
+;; revert mode
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
 
-;; duckduckgo
-(setq load-path (cons "./duckduckgo" load-path))
-(require 'ddg)
-(require 'ddg-search)
-(require 'ddg-mode)
+;; centaur-tabs
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+)
+;; additional config
+(centaur-tabs-headline-match)
+(setq centaur-tabs-style "bar")
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-set-bar 'left)
 
+;; Making deleted files go to trash can
+(setq delete-by-moving-to-trash t
+      trash-directory "~/.local/share/Trash/files/")
+
+;; indent-guides
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'text-mode-hook 'highlight-indent-guides-mode)
+(require 'highlight-indent-guides)
+(setq highlight-indent-guides-method 'column)
+(setq highlight-indent-guides-auto-enabled nil)
+
+(set-face-background 'highlight-indent-guides-odd-face "darkgray")
+(set-face-background 'highlight-indent-guides-even-face "dimgray")
+(set-face-foreground 'highlight-indent-guides-character-face "dimgray")
+
+;; input method
+(setq default-input-method "vietnamese-telex")
+
+;; add cheat sheet
+(map! :leader
+      (:prefix ("=" . "open file")
+       :desc "Open cheat-sheet file" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
+       )
+)

@@ -51,4 +51,5 @@
 
 ;;customize
 (package! catppuccin-theme)
-
+(package! beacon)
+(package! centaur-tabs)
