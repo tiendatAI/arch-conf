@@ -96,10 +96,11 @@
 )
 ;; additional config
 (centaur-tabs-headline-match)
-(setq centaur-tabs-style "bar")
+(setq centaur-tabs-style "wave")
 (setq centaur-tabs-set-icons t)
-(setq centaur-tabs-set-bar 'left)
-
+(setq centaur-tabs-set-modified-marker t)
+(setq centaur-tabs-modified-marker "●")
+(setq centaur-tabs-gray-out-icons 'buffer)
 ;; Making deleted files go to trash can
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
@@ -124,3 +125,12 @@
        :desc "Open cheat-sheet file" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
        )
 )
+
+;; ;; Enable centaur-tabs without faulty theming in daemon mode.
+;; (if (not (daemonp))
+;; 	 (centaur-tabs-mode)
+
+;;   (defun centaur-tabs-daemon-mode (frame)
+;; 	 (unless (and (featurep 'centaur-tabs) (centaur-tabs-mode-on-p))
+;; 		(run-at-time nil nil (lambda () (centaur-tabs-mode)))))
+;;   (add-hook 'after-make-frame-functions #'centaur-tabs-daemon-mode))
