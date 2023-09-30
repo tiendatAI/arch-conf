@@ -21,8 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Intel One Mono" :size 15))
-;; (setq doom-font (font-spec :family "Intel One Mono" :size 17))
+(setq doom-font (font-spec :family "Intel One Mono" :size 17))
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -89,18 +88,11 @@
 (setq global-auto-revert-non-file-buffers t)
 
 ;; centaur-tabs
-(use-package centaur-tabs
-  :demand
-  :config
-  (centaur-tabs-mode t)
-)
-;; additional config
-(centaur-tabs-headline-match)
+(setq centaur-tabs-mode t)
 (setq centaur-tabs-style "wave")
-(setq centaur-tabs-set-icons t)
-(setq centaur-tabs-set-modified-marker t)
+(setq centaur-tabs-set-bar 'right)
 (setq centaur-tabs-modified-marker "●")
-(setq centaur-tabs-gray-out-icons 'buffer)
+
 ;; Making deleted files go to trash can
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
@@ -126,11 +118,3 @@
        )
 )
 
-;; ;; Enable centaur-tabs without faulty theming in daemon mode.
-;; (if (not (daemonp))
-;; 	 (centaur-tabs-mode)
-
-;;   (defun centaur-tabs-daemon-mode (frame)
-;; 	 (unless (and (featurep 'centaur-tabs) (centaur-tabs-mode-on-p))
-;; 		(run-at-time nil nil (lambda () (centaur-tabs-mode)))))
-;;   (add-hook 'after-make-frame-functions #'centaur-tabs-daemon-mode))
