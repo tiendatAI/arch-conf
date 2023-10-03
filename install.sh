@@ -126,5 +126,7 @@ safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay 
 safe_install "atuin: history shell" "atuin" "yay -S atuin"
 
 
-
+# following this link to install nix :
+# https://nixos.org/download
+# https://nix-community.github.io/home-manager/index.html#sec-install-standalone
 
