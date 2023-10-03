@@ -14,7 +14,10 @@
 # +spotify
 # +discord
 #
+# Additional packages:
 # cmake
+# language-tools
+# hunspell
 #
 # Add more some shell tools:
 # bat 
@@ -92,8 +95,11 @@ cd ./temp/ && cp ./starship.toml ~/.config/ && cd ../
 rm -rf temp
 
 
-############ cmd tools############
+############ additional packages ############
 safe_install "cmake" "cmake" "yay -S cmake"
+safe_install "fzf" "fzf" "yay -S fzf"
+safe_install "languagetool" "languagetool" "yay -S languagetool"
+safe_install "hunspell" "hunspell" "yay -S hunspell"
 
 
 ############ desktop apps ############

@@ -38,11 +38,13 @@ cp ./home-manager/bash/.bashrc ~/
 #nvim config
 cp -r ./nvim/lua/custom ~/.config/nvim/lua/
 
+# spelling
+mkdir -p ~/Library/Spelling/  
+cp ./dicts/en_US/* ~/Library/Spelling
+
+#SUDO
 # firefox config
 sudo cp -r ./firefox/ /etc/
 
-# nyxt config (from the other)
-git clone https://github.com/aartaka/nyxt-config ~/.config/nyxt/ 
-cd ~/.config/nyxt/nyxt-config/ | cp -r ./* ../
-git clone https://github.com/aartaka/nx-dark-reader.git ~/.local/share/nyxt/extensions/nx-dark-reader
-
+# sync clock
+timedatectl set-local-rtc 1 --adjust-system-clock

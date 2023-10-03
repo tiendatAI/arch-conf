@@ -42,6 +42,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+(setq org-agenda-files '( "~/org/TODO/every-day.org" "~/org/TODO/long-term.org" "~/org/TODO/tracking-habit.org" ))
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -78,7 +79,7 @@
 ;; they are implemented.
 
 ;; default dired
-(setq projectile-project-search-path '("~/Workplaces/"))
+(setq projectile-project-search-path '("~/workplaces/"))
 
 ;; beacon-mode
 (beacon-mode 1)
@@ -88,10 +89,10 @@
 (setq global-auto-revert-non-file-buffers t)
 
 ;; centaur-tabs
-(setq centaur-tabs-mode t)
-(setq centaur-tabs-style "wave")
-(setq centaur-tabs-set-bar 'right)
-(setq centaur-tabs-modified-marker "●")
+(setq centaur-tabs-mode t
+      centaur-tabs-style "wave"
+      centaur-tabs-set-bar 'right
+      centaur-tabs-modified-marker "●")
 
 ;; Making deleted files go to trash can
 (setq delete-by-moving-to-trash t
@@ -118,3 +119,47 @@
        )
 )
 
+;; bingchat
+(add-to-list 'load-path "~/.config/emacs/site-lisp/emacs-aichat")
+(require 'aichat-bingai)
+(setq aichat-bingai-cookies-file "~/.config/doom/cookies.json")
+
+;; display time
+(display-time-mode 1)
+
+;; add binding
+(map! "M-[" #'centaur-tabs-backward
+      "M-]" #'centaur-tabs-forward)
+
+;; record time I actually work
+(defun my-reset-org-clock ()
+  "Reset all org-mode clocks at midnight."
+  (interactive)
+  (save-excursion
+    (org-clock-reset)
+    (org-save-all-org-buffers)))
+(run-at-time "24:00" nil #'my-reset-org-clock)
+
+;; turn off pomodoro sound
+(setq pomidor-sound-tick nil
+      pomidor-sound-tack nil)
+
+;; duckduckgo
+(setq load-path (cons "~/.config/doom/duckduckgo" load-path))
+(require 'ddg)
+(require 'ddg-search)
+(require 'ddg-mode)
+
+;; binding pomodoro
+(global-set-key (kbd "<f12>") #'pomidor)
+
+;; deft mode
+(setq deft-directory "~/org"
+      deft-recursive t
+      deft-use-filename-as-title t
+      deft-use-filter-string-for-filename t
+      deft-extensions '("org")
+      )
+
+;; org-roam
+(setq org-roam-directory "~/org")

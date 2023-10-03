@@ -49,6 +49,29 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-;;customize
+;; customize
 (package! catppuccin-theme)
 (package! beacon)
+
+;; better pdf tools
+(package! pdf-tools :recipe
+  (:host github
+   :repo "dalanicolai/pdf-tools"
+   :branch "pdf-roll"
+   :files ("lisp/*.el"
+           "README"
+           ("build" "Makefile")
+           ("build" "server")
+           (:exclude "lisp/tablist.el" "lisp/tablist-filter.el"))))
+
+(package! image-roll :recipe
+  (:host github
+   :repo "dalanicolai/image-roll.el"))
+
+;; bingchat
+(package! async-await)
+(package! markdown-mode)
+
+;; better pomodoro
+(package! pomidor)
+
