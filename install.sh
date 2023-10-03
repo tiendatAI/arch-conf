@@ -9,7 +9,6 @@
 # And reconfig starship
 #
 # desktop apps:
-# +nyxt
 # +office
 # +spotify
 # +discord
@@ -31,7 +30,6 @@
 # Ag
 # tldr
 #
-# Install config for firefox 
 
 # function to install almost packages
 safe_install() {
@@ -59,32 +57,20 @@ safe_install() {
 
 # nvim
 safe_install "neovim: text editor" "nvim" "yay -S neovim"
-# echo 'aslias vim=nvim' >> ~/.bashrc
-
-############ doom emacs ############
-# yay -S emacs-nativecomp
-
-
 # ############ nvchad ############
 mv ~/.config/nvim ~/.config/nvim.backup
 rm -rf ~/.local/share/nvim
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 
-# echo "def vim [] { nvim }" >> ~/.config/nushell/config.nu
 
+############ doom emacs ############
+safe_install "emacs: better text editor" "emacs" "yay -S emacs-nativecomp"
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
 
 ############ nushell ############
 safe_install "nushell" "nu" "yay -S nushell"
-
-# startup with terminal
-startup_nu='
-if command -v nu &> /dev/null; then
-  exec nu
-fi
-'
-# Uncomment to startup with nushell
-echo "$startup_nu" >> ~/.bashrc
 
 
 ############ catppuccin ############
@@ -103,8 +89,6 @@ safe_install "hunspell" "hunspell" "yay -S hunspell"
 
 
 ############ desktop apps ############
-safe_install "pdf viewer" "evince" "yay -S evince"
-safe_install "emacs browser" "nyxt" "yay -S nyxt"
 safe_install "libreoffice" "libreoffice" "yay -S libreoffice-still"
 safe_install "discord" "discord" "yay -S discord"
 safe_install "spotify" "spotify" "yay -S spotify"

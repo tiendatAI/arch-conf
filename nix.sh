@@ -19,6 +19,9 @@ safe_install() {
 ############ nix ############
 safe_install "nix packkage manager" "nix" "sh <(curl -L https://nixos.org/nix/install) --daemon"
 
+echo "Restart and run again"
+exit 0
+
 #install home-manager(23.11)
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
@@ -34,4 +37,4 @@ cp -r ./home-manager/* ~/.config/home-manager/
 home-manager switch
 
 # Add flake and nix-command in config
-sudo echo "experimental-features = nix-command flakes" >> /etc/nix/nix.conf
+echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf 
