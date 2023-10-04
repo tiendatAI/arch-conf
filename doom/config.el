@@ -153,13 +153,8 @@
 ;; binding pomodoro
 (global-set-key (kbd "<f12>") #'pomidor)
 
-;; deft mode
-(setq deft-directory "~/org"
-      deft-recursive t
-      deft-use-filename-as-title t
-      deft-use-filter-string-for-filename t
-      deft-extensions '("org")
-      )
-
 ;; org-roam
-(setq org-roam-directory "~/org")
+(setq org-roam-directory "~/org/roam-notes")
+
+;; default setup
+(setq hl-todo-mode t)

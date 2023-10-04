@@ -13,10 +13,12 @@
 # +spotify
 # +discord
 #
-# Additional packages:
+# Additional packages for emacs:
 # cmake
 # language-tools
 # hunspell
+# mpd
+# mpc
 #
 # Add more some shell tools:
 # bat 
@@ -86,6 +88,8 @@ safe_install "cmake" "cmake" "yay -S cmake"
 safe_install "fzf" "fzf" "yay -S fzf"
 safe_install "languagetool" "languagetool" "yay -S languagetool"
 safe_install "hunspell" "hunspell" "yay -S hunspell"
+safe_install "mpd" "mpd" "yay -S mpd"
+safe_install "mpc" "mpc" "yay -S mpc"
 
 
 ############ desktop apps ############
