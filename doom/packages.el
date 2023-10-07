@@ -77,7 +77,7 @@
 ;; notification on org
 (package! org-alert)
 
-;; better elfeed
-(package! elfeed-score)
-(package! helm-bibtex )
-(package! org-ref )
+;; codeium
+(package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
+
+(package! cape)
