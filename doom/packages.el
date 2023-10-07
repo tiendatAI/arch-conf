@@ -49,8 +49,10 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-;; customize
+;; customize theme
 (package! catppuccin-theme)
+
+;; cursor
 (package! beacon)
 
 ;; better pdf tools
@@ -63,15 +65,19 @@
            ("build" "Makefile")
            ("build" "server")
            (:exclude "lisp/tablist.el" "lisp/tablist-filter.el"))))
-
 (package! image-roll :recipe
   (:host github
    :repo "dalanicolai/image-roll.el"))
-
-;; bingchat
-(package! async-await)
-(package! markdown-mode)
+;; remember position when leave pdf
+(package! saveplace-pdf-view)
 
 ;; better pomodoro
 (package! pomidor)
 
+;; notification on org
+(package! org-alert)
+
+;; better elfeed
+(package! elfeed-score)
+(package! helm-bibtex )
+(package! org-ref )

@@ -77,59 +77,24 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;; load other configs
+(mapc 'load (file-expand-wildcards "~/.config/doom/configs/*.el"))
 
-;; default dired
+;; make sure installed packages
+(unless (package-installed-p 'nerd-icons)
+  (package-install 'nerd-icons))
+
+;; default path
+(setq org-roam-directory "~/org/roam-notes")
 (setq projectile-project-search-path '("~/workplaces/"))
-
-;; beacon-mode
-(beacon-mode 1)
-
-;; revert mode
-(global-auto-revert-mode 1)
-(setq global-auto-revert-non-file-buffers t)
+(setq delete-by-moving-to-trash t
+      trash-directory "~/.local/share/Trash/files/")
 
 ;; centaur-tabs
 (setq centaur-tabs-mode t
       centaur-tabs-style "wave"
       centaur-tabs-set-bar 'right
       centaur-tabs-modified-marker "●")
-
-;; Making deleted files go to trash can
-(setq delete-by-moving-to-trash t
-      trash-directory "~/.local/share/Trash/files/")
-
-;; indent-guides
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(add-hook 'text-mode-hook 'highlight-indent-guides-mode)
-(require 'highlight-indent-guides)
-(setq highlight-indent-guides-method 'column)
-(setq highlight-indent-guides-auto-enabled nil)
-
-(set-face-background 'highlight-indent-guides-odd-face "darkgray")
-(set-face-background 'highlight-indent-guides-even-face "dimgray")
-(set-face-foreground 'highlight-indent-guides-character-face "dimgray")
-
-;; input method
-(setq default-input-method "vietnamese-telex")
-
-;; add cheat sheet
-(map! :leader
-      (:prefix ("=" . "open file")
-       :desc "Open cheat-sheet file" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
-       )
-)
-
-;; bingchat
-(add-to-list 'load-path "~/.config/emacs/site-lisp/emacs-aichat")
-(require 'aichat-bingai)
-(setq aichat-bingai-cookies-file "~/.config/doom/cookies.json")
-
-;; display time
-(display-time-mode 1)
-
-;; add binding
-(map! "M-[" #'centaur-tabs-backward
-      "M-]" #'centaur-tabs-forward)
 
 ;; record time I actually work
 (defun my-reset-org-clock ()
@@ -144,17 +109,34 @@
 (setq pomidor-sound-tick nil
       pomidor-sound-tack nil)
 
+;; org notification
+(require 'org-alert)
+(setq alert-default-style 'libnotify)
+
+;; pdf tools
+(require 'saveplace-pdf-view)
+(save-place-mode 1)
+
+;; disable mouse
+(require 'disable-mouse)
+(global-disable-mouse-mode)
+(mapc #'disable-mouse-in-keymap
+  (list evil-motion-state-map
+        evil-normal-state-map
+        evil-visual-state-map
+        evil-insert-state-map))
+
 ;; duckduckgo
-(setq load-path (cons "~/.config/doom/duckduckgo" load-path))
+(setq load-path (cons "~/.config/doom/configs/duckduckgo" load-path))
 (require 'ddg)
 (require 'ddg-search)
 (require 'ddg-mode)
 
-;; binding pomodoro
-(global-set-key (kbd "<f12>") #'pomidor)
-
-;; org-roam
-(setq org-roam-directory "~/org/roam-notes")
-
-;; default setup
+;; default settings
+(beacon-mode 1)
+(display-time-mode 1)
 (setq hl-todo-mode t)
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
+(setq default-input-method "vietnamese-telex")
+(setq scroll-margin 8)
