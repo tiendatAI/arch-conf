@@ -8,7 +8,7 @@
  '(org-agenda-files
    '("~/org/TODO/every-day.org" "/home/tiendat/org/README.org"))
  '(package-selected-packages
-   '(org-alert visual-fill-column org-present nerd-icons doom-themes)))
+   '(pdf-tools org-alert visual-fill-column org-present nerd-icons doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

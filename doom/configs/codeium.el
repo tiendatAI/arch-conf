@@ -78,5 +78,6 @@
         ;; get only preview
         ;; company-frontends '(company-preview-frontend)
         ;; also get a drop down
-        company-frontends '(company-pseudo-tooltip-frontend company-preview-frontend)
+        ;; company-frontends '(company-pseudo-tooltip-frontend company-preview-frontend)
+        company-frontends '(company-pseudo-tooltip-frontend)
         ))

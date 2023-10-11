@@ -2,7 +2,7 @@
 
 # This script will install this following packages:
 # nix
-# nvimchad (for chad)
+# astro nvim(for chad)
 # doom emacs (for better chad)
 # nerd fonts
 # catppuncin
@@ -59,11 +59,11 @@ safe_install() {
 
 # nvim
 safe_install "neovim: text editor" "nvim" "yay -S neovim"
-# ############ nvchad ############
+# ############ astro nvim ############
 mv ~/.config/nvim ~/.config/nvim.backup
 rm -rf ~/.local/share/nvim
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 
 ############ doom emacs ############
@@ -84,12 +84,18 @@ rm -rf temp
 
 
 ############ additional packages ############
+#for doom emacs 
 safe_install "cmake" "cmake" "yay -S cmake"
 safe_install "fzf" "fzf" "yay -S fzf"
 safe_install "languagetool" "languagetool" "yay -S languagetool"
 safe_install "hunspell" "hunspell" "yay -S hunspell"
 safe_install "mpd" "mpd" "yay -S mpd"
 safe_install "mpc" "mpc" "yay -S mpc"
+
+# for astro nvim
+safe_install "lazygit" "lazygit" "yay -S lazygit"
+safe_install "gdu" "gdu" "yay -S gdu"
+safe_install "bottom" "bottom" "yay -S bottom"
 
 
 ############ desktop apps ############
@@ -103,7 +109,6 @@ safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -S wl-gammarelay"
 safe_install "bat : alternative of cat" "bat" "yay -S bat"
 safe_install "fd: alternative of find" "fd" "yay -S fd"
 safe_install "zoxide: alternative of cd" "z" "yay -S zoxide"
-safe_install "zellij: alternative of tmux" "zellij" "yay -S zellij"
 safe_install "joshuto: terminal file manager" "joshuto" "yay -S joshuto"
 safe_install "ripgrep: recursively searches directories" "rg" "yay -S ripgrep"
 safe_install "exa: A modern replacement for ls" "exa" "yay -S exa"

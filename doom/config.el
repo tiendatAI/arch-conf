@@ -94,7 +94,9 @@
 (setq centaur-tabs-mode t
       centaur-tabs-style "wave"
       centaur-tabs-set-bar 'right
-      centaur-tabs-modified-marker "●")
+      centaur-tabs-modified-marker "●"
+      centaur-tabs-label-fixed-length 12
+      )
 
 ;; record time I actually work
 (defun my-reset-org-clock ()
@@ -135,9 +137,10 @@
 ;; default settings
 (beacon-mode 1)
 (display-time-mode 1)
+(display-battery-mode 1)
 (setq hl-todo-mode t)
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
 (setq default-input-method "vietnamese-telex")
-(setq scroll-margin 8)
-
+(setq scroll-margin 5)
+(setq projectile-indexing-method 'alien)

@@ -79,5 +79,7 @@
 
 ;; codeium
 (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
-
 (package! cape)
+
+;; typst
+(package! typst-ts-mode :recipe (:type git :host sourcehut :repo "meow_king/typst-ts-mode"))
