@@ -87,3 +87,6 @@
 (setq default-input-method "vietnamese-telex")
 (setq scroll-margin 5)
 (setq projectile-indexing-method 'alien)
+
+;; remote with HPC
+(setq tramp-default-method "ssh")

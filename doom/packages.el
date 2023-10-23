@@ -35,3 +35,9 @@
 
 ;; typst
 (package! typst-ts-mode :recipe (:type git :host sourcehut :repo "meow_king/typst-ts-mode"))
+
+;;python
+(package! pyvenv)
+
+;;rss
+(package! elfeed-score)
