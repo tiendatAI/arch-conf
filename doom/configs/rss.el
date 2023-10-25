@@ -1,8 +1,8 @@
 ;; some config of rss
 (after! elfeed
-  (setq elfeed-search-filter "@3-month-ago +unread"))
+  (setq elfeed-search-filter "@1-year-ago +unread"))
 (add-hook! 'elfeed-search-mode-hook #'elfeed-update)
-(setq elfeed-goodies/entry-pane-size 0.5)
+;; (setq elfeed-goodies/entry-pane-size 0.5)
 
 
 ;; add more custom
@@ -40,13 +40,6 @@
 (setq elfeed-search-title-max-width 110)
 
 
-;; ;; elfeed score
-;; (after! elfeed
-;;   (setq elfeed-score-load-score-file "~/org/elfeed.score") ; See the elfeed-score documentation for the score file syntax
-;;   (setq elfeed-score-enable t)
-;;   (define-key elfeed-search-mode-map "=" elfeed-score-map)
-;;   )
-;;
 (use-package! elfeed-score
   :after elfeed
   :config
