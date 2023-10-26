@@ -19,6 +19,7 @@
 # hunspell
 # mpd
 # mpc
+# dictd
 #
 # Add more some shell tools:
 # bat 
@@ -91,6 +92,7 @@ safe_install "languagetool" "languagetool" "yay -S languagetool"
 safe_install "hunspell" "hunspell" "yay -S hunspell"
 safe_install "mpd" "mpd" "yay -S mpd"
 safe_install "mpc" "mpc" "yay -S mpc"
+safe_install "dictd" "dictd" "yay -S dictd"
 
 # for astro nvim
 safe_install "lazygit" "lazygit" "yay -S lazygit"

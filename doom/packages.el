@@ -36,8 +36,11 @@
 ;; typst
 (package! typst-ts-mode :recipe (:type git :host sourcehut :repo "meow_king/typst-ts-mode"))
 
-;;python
+;;python autoload env
 (package! pyvenv)
 
-;;rss
+;;rss for research paper
 (package! elfeed-score)
+
+;;translate
+(package! google-translate)
