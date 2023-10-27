@@ -2,7 +2,7 @@
 (after! elfeed
   (setq elfeed-search-filter "@1-year-ago +unread"))
 (add-hook! 'elfeed-search-mode-hook #'elfeed-update)
-;; (setq elfeed-goodies/entry-pane-size 0.5)
+(setq elfeed-goodies/entry-pane-size 0.5)
 
 (use-package! elfeed
   :config
