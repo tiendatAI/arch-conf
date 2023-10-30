@@ -55,7 +55,6 @@ safe_install() {
 #some good fonts
 #yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 #yay -S ttf-intel-one-mono ttf-nerd-fonts-symbols
-#yay -S ttf-ms-win11-auto
 
 
 # nvim
@@ -105,6 +104,8 @@ safe_install "libreoffice" "libreoffice" "yay -S libreoffice-still"
 safe_install "discord" "discord" "yay -S discord"
 safe_install "spotify" "spotify" "yay -S spotify"
 safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -S wl-gammarelay"
+safe_install "thunderbird" "thunderbird " "yay -S thunderbird"
+
 
 
 ############ shell tools ############
