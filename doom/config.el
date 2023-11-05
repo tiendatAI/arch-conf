@@ -96,3 +96,6 @@
 (require 'google-translate-smooth-ui)
 (global-set-key "\C-ct" 'google-translate-smooth-translate)
 (setq google-translate-translation-directions-alist '(("en" . "en")("en" . "vi")))
+
+;; Trigger completion immediately.
+(setq company-idle-delay 0)

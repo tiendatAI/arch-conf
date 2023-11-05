@@ -29,9 +29,10 @@
 ;; notification on org
 (package! org-alert)
 
-;; codeium
-(package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
-(package! cape)
+;; ;; codeium
+;; (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
+;; (package! cape)
+;; tabnine
 
 ;; typst
 (package! typst-ts-mode :recipe (:type git :host sourcehut :repo "meow_king/typst-ts-mode"))
@@ -44,3 +45,6 @@
 
 ;;translate
 (package! google-translate)
+
+;; org ai for chatGPT
+(package! org-ai)
