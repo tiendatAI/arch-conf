@@ -123,10 +123,13 @@ $env.config = {
 
 ### add more config
 
+# avoid use rm
+alias rm = echo "This is not the command you are looking for."; false
+
 #nvim
-def vim [] { nvim }
-def vi [] { nvim }
-def nv [] { nvim }
+# def vim [] { nvim }
+# def vi [] { nvim }
+# def nv [] { nvim }
 
 #thefuck
 alias fuck = with-env {TF_ALIAS: "fuck", PYTHONIOENCODING: "utf-8"} {
@@ -146,4 +149,5 @@ $env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin")
 
 #zoxide
 source ~/.zoxide.nu
+
 

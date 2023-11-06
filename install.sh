@@ -32,7 +32,7 @@
 # dust
 # Ag
 # tldr
-#
+# trash-cli
 
 # function to install almost packages
 safe_install() {
@@ -120,6 +120,7 @@ safe_install "dust: A more intuitive version of du in rust" "dust" "yay -S dust"
 safe_install "Ag: A code-searching tool similar to ack, but faster" "ag" "yay -S the_silver_searcher"
 safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay -S tldr"
 safe_install "atuin: history shell" "atuin" "yay -S atuin"
+safe_install "trash-cli: alternative for rm" "trash" "yay -S trash-cli"
 
 
 # following this link to install nix :
