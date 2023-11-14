@@ -107,3 +107,7 @@
   ;; or
   ;; (add-to-list 'lsp-file-watch-ignored-files "[/\\\\]\\.my-files\\'")
   )
+
+;; debugger
+(after! dap-mode
+  (setq dap-python-debugger 'debugpy))
