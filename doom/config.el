@@ -111,3 +111,7 @@
 ;; debugger
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
+
+;; hide special text (italic, bold)
+(setq org-hide-emphasis-markers t)
+(setq org-pretty-entities-include-sub-superscripts t)
