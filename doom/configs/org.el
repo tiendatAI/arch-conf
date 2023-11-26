@@ -1,9 +1,10 @@
 (setq org-directory "~/org/")
-(setq org-roam-directory "~/org/roam-notes")
+(setq org-roam-directory "~/org/roam-notes/")
 (setq org-agenda-files '( "~/org/TODO/every-day.org"
                           "~/org/TODO/long-term.org"
                           "~/org/TODO/tracking-habit.org" ))
 (setq org-noter-notes-search-path '("~/org/noter/"))
+(setq org-journal-dir "~/org/journal/")
 
 ;; record time I actually work
 (defun my-reset-org-clock ()
@@ -24,3 +25,6 @@
 
 ;; When a TODO is set to a done state, record a timestamp
 (setq org-log-done 'time)
+
+;; Set up for journal
+(setq org-journal-file-type 'yearly)
