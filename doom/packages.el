@@ -48,3 +48,12 @@
 
 ;; org ai for chatGPT
 (package! org-ai)
+
+;; code rust in org mode
+(package! ob-rust)
+
+;; better agenda
+(package! org-super-agenda)
+
+;; display list of special comment (TODO, FIXME,  etc.)
+(package! comment-tags )
