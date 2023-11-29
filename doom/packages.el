@@ -57,3 +57,5 @@
 ;; better agenda
 (package! org-super-agenda)
 (package! org-timeblock)
+;; kaban board for project planning
+(package! org-kanban)
