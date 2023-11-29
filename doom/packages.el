@@ -26,14 +26,6 @@
 ;; better pomodoro
 (package! pomidor)
 
-;; notification on org
-(package! org-alert)
-
-;; ;; codeium
-;; (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
-;; (package! cape)
-;; tabnine
-
 ;; typst
 (package! typst-ts-mode :recipe (:type git :host sourcehut :repo "meow_king/typst-ts-mode"))
 
@@ -46,14 +38,22 @@
 ;;translate
 (package! google-translate)
 
-;; org ai for chatGPT
-(package! org-ai)
-
-;; code rust in org mode
-(package! ob-rust)
-
-;; better agenda
-(package! org-super-agenda)
-
 ;; display list of special comment (TODO, FIXME,  etc.)
 (package! comment-tags )
+
+;; packages for org
+;; notification on org
+(package! org-alert)
+;; org ai for chatGPT
+(package! org-ai)
+;; code rust in org mode
+(package! ob-rust)
+;; download image from internet
+(package! org-download)
+;; beter org-roam
+(package! org-roam-ui)
+;;insert content of text with a link
+(package! org-transclusion) 
+;; better agenda
+(package! org-super-agenda)
+(package! org-timeblock)
