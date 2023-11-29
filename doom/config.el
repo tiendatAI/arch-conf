@@ -26,13 +26,13 @@
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
 
-;; centaur-tabs
-(setq centaur-tabs-mode t
-      centaur-tabs-style "wave"
-      centaur-tabs-set-bar 'right
-      centaur-tabs-modified-marker "●"
-      centaur-tabs-label-fixed-length 12
-      )
+;; ;; centaur-tabs
+;; (setq centaur-tabs-mode t
+;;       centaur-tabs-style "wave"
+;;       centaur-tabs-set-bar 'right
+;;       centaur-tabs-modified-marker "●"
+;;       centaur-tabs-label-fixed-length 12
+;;       )
 
 ;; turn off pomodoro sound
 (setq pomidor-sound-tick nil
