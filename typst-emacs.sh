@@ -23,5 +23,6 @@ else
     cc -fPIC -shared *.o -o "libtree-sitter-typst.so"
 fi
 
-mkdir -p "~/.config/emacs/tree-sitter"
+# Should remove folder after cp .so file
+mkdir "~/.config/emacs/tree-sitter"
 cp "libtree-sitter-typst.so" "~/.config/emacs/tree-sitter"
