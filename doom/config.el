@@ -75,7 +75,9 @@
 (require 'google-translate)
 (require 'google-translate-smooth-ui)
 (global-set-key "\C-ct" 'google-translate-smooth-translate)
-(setq google-translate-translation-directions-alist '(("en" . "en")("en" . "vi")))
+(setq google-translate-translation-directions-alist '(("en" . "en")("en" . "vi")("vi" . "en")))
+(setq google-translate-preferable-input-methods-alist '((nil . ("en"))
+                                                        (vietnamese-telex . ("vi"))))
 
 ;; Trigger completion immediately.
 (setq company-idle-delay 0)
@@ -92,3 +94,5 @@
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
 
+;; setup for typst
+(setq typst-ts-mode-watch-options "--open")
