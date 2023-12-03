@@ -77,8 +77,5 @@
 ;; kaban board for project planning
 (package! org-kanban)
 
-;; kaban board for project planning
-(package! org-kanban)
-
 ;; diagram in org-mode
 (package! ob-mermaid)

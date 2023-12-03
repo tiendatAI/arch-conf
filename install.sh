@@ -121,7 +121,7 @@ safe_install "Ag: A code-searching tool similar to ack, but faster" "ag" "yay -S
 safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay -S tldr"
 safe_install "atuin: history shell" "atuin" "yay -S atuin"
 safe_install "trash-cli: alternative for rm" "trash" "yay -S trash-cli"
-
+safe_install "rclone: drive cmdline tool" "rclone" "yay -S rclone"
 
 # following this link to install nix :
 # https://nixos.org/download
