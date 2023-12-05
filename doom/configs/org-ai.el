@@ -7,4 +7,4 @@
   (org-ai-global-mode) ; installs global keybindings on C-c M-a
   ) ; if you are using yasnippet and want `ai` snippets
 
-(setq auth-sources '("~/private-conf/authinfo.gpg"))
+(setq auth-sources '("~/private-conf/chatgpt/authinfo.gpg"))
