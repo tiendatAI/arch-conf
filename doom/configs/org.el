@@ -8,6 +8,12 @@
 (setq ob-mermaid-cli-path "/nix/store/6jly5h71i8rgv2yx63c1qrc29g36nk3s-_at_mermaid-js_slash_mermaid-cli-10.2.4/bin/mmdc") ;; bad practice
 ;; (setq ob-mermaid-cli-path (shell-command-to-string "which mmdc"))
 
+;; enable langtool when save buffer
+(add-hook 'org-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'langtool-check nil 'local)))
+
+
 ;; record time I actually work
 (defun my-reset-org-clock ()
   "Reset all org-mode clocks at midnight."
