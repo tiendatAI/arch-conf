@@ -37,6 +37,11 @@
 ;; turn off pomodoro sound
 (setq pomidor-sound-tick nil
       pomidor-sound-tack nil)
+(setq pomidor-breaks-before-long 4) ; wait 4 short breaks before long break
+(setq pomidor-long-break-seconds (* 15 60)) ; 20 minutes long break time
+(setq pomidor-seconds (* 25 60)) ; 25 minutes for the work period
+(setq pomidor-break-seconds (* 5 60)) ; 5 minutes break time
+
 
 ;; pdf tools
 (require 'saveplace-pdf-view)
@@ -93,6 +98,3 @@
 ;; debugger
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
-
-;; setup for typst
-(setq typst-ts-mode-watch-options "--open")

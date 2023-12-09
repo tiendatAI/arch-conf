@@ -13,7 +13,6 @@
           (lambda ()
             (add-hook 'before-save-hook 'langtool-check nil 'local)))
 
-
 ;; record time I actually work
 (defun my-reset-org-clock ()
   "Reset all org-mode clocks at midnight."
