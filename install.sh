@@ -92,6 +92,7 @@ safe_install "hunspell" "hunspell" "yay -S hunspell"
 safe_install "mpd" "mpd" "yay -S mpd"
 safe_install "mpc" "mpc" "yay -S mpc"
 safe_install "dictd" "dictd" "yay -S dictd"
+safe_install "wordnet-cli" "wordnet-cli" "yay -S wordnet-cli"
 
 # for astro nvim
 safe_install "lazygit" "lazygit" "yay -S lazygit"
@@ -100,7 +101,6 @@ safe_install "bottom" "bottom" "yay -S bottom"
 
 
 ############ desktop apps ############
-safe_install "libreoffice" "libreoffice" "yay -S libreoffice-still"
 safe_install "discord" "discord" "yay -S discord"
 safe_install "spotify" "spotify" "yay -S spotify"
 safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -S wl-gammarelay"

@@ -7,7 +7,7 @@
 ;; custom binding
 ;; (map! "M-[" #'centaur-tabs-backward
 ;;       "M-]" #'centaur-tabs-forward)
-(map! "M-]" #'evil-goto-definition)
+;; (map! "M-]" #'evil-goto-definition)
 
 ;; binding pomodoro
 (global-set-key (kbd "<f12>") #'pomidor)

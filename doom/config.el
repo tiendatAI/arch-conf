@@ -37,11 +37,6 @@
 ;; turn off pomodoro sound
 (setq pomidor-sound-tick nil
       pomidor-sound-tack nil)
-(setq pomidor-breaks-before-long 4) ; wait 4 short breaks before long break
-(setq pomidor-long-break-seconds (* 15 60)) ; 20 minutes long break time
-(setq pomidor-seconds (* 25 60)) ; 25 minutes for the work period
-(setq pomidor-break-seconds (* 5 60)) ; 5 minutes break time
-
 
 ;; pdf tools
 (require 'saveplace-pdf-view)
@@ -98,3 +93,15 @@
 ;; debugger
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
+
+;; enable fold when open new file
+(setq org-startup-folded 'content)
+;; python
+(add-hook 'python-mode-hook 'hs-minor-mode)
+(add-hook 'python-mode-hook 'hs-hide-all)
+;; C
+(add-hook 'c-mode-hook 'hs-minor-mode)
+(add-hook 'c-mode-hook 'hs-hide-all)
+;; rust
+(add-hook 'rust-mode-hook 'hs-minor-mode)
+(add-hook 'rust-mode-hook 'hs-hide-all)

@@ -59,12 +59,12 @@
        file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
-       ;;god               ; run Emacs commands without modifier keys
+       ;; god               ; run Emacs commands without modifier keys
        ;;lispy             ; vim for lisp, for people who don't like vim
        multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
        ;;parinfer          ; turn lisp into python, sort of
-       rotate-text       ; cycle region at point between text candidates
+       ;; rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        word-wrap         ; soft wrapping with language-aware indent
 
@@ -72,7 +72,7 @@
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        ibuffer         ; interactive buffer management
-       undo              ; persistent, smarter undo for your inevitable mistakes
+       ;; undo              ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -92,12 +92,15 @@
        ;;collab            ; buffers with friends
        (debugger +lsp)         ; FIXME stepping through code, to help you add bugs
        direnv
-       docker
+       ;; docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;; ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
-       lookup              ; navigate your code and its documentation
+       (lookup
+        +dictionary
+        +offline
+        )              ; navigate your code and its documentation
        lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
@@ -112,8 +115,8 @@
        upload            ; map local to remote projects via ssh/ftp
 
        :os
-       (:if IS-MAC macos)  ; improve compatibility with macOS
-       tty               ; improve the terminal Emacs experience
+       ;; (:if IS-MAC macos)  ; improve compatibility with macOS
+       ;; tty               ; improve the terminal Emacs experience
 
        :lang
        ;;agda              ; types of types of types of types...
