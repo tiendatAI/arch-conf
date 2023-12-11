@@ -144,7 +144,7 @@ $env.config = {
 source ~/.local/share/atuin/init.nu
 
 #doom emacs
-$env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin")
+$env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin" | append "~/.cargo/bin")
 # def emacs [] { emacsclient -c -a 'emacs' }
 
 #zoxide
