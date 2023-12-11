@@ -87,17 +87,17 @@ rm -rf temp
 #for doom emacs 
 safe_install "cmake" "cmake" "yay -S cmake"
 safe_install "fzf" "fzf" "yay -S fzf"
-safe_install "languagetool" "languagetool" "yay -S languagetool"
+safe_install "languagetool" "yay -Q languagetool" "yay -S languagetool"
 safe_install "hunspell" "hunspell" "yay -S hunspell"
 safe_install "mpd" "mpd" "yay -S mpd"
 safe_install "mpc" "mpc" "yay -S mpc"
-safe_install "dictd" "dictd" "yay -S dictd"
-safe_install "wordnet-cli" "wordnet-cli" "yay -S wordnet-cli"
+safe_install "dictd" "yay -Q dictd" "yay -S dictd"
+safe_install "wordnet-cli" "wn" "yay -S wordnet-cli"
 
 # for astro nvim
 safe_install "lazygit" "lazygit" "yay -S lazygit"
-safe_install "gdu" "gdu" "yay -S gdu"
-safe_install "bottom" "bottom" "yay -S bottom"
+safe_install "gdu" "yay -Q gdu" "yay -S gdu"
+safe_install "bottom" "yay -Q bottom" "yay -S bottom"
 
 
 ############ desktop apps ############
