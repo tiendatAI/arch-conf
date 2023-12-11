@@ -105,3 +105,7 @@
 ;; rust
 (add-hook 'rust-mode-hook 'hs-minor-mode)
 (add-hook 'rust-mode-hook 'hs-hide-all)
+
+;; open vterm in right, not bottom
+(after! vterm
+  (set-popup-rule! "^\\*vterm" :side 'right :size 0.4 :select t))
