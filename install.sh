@@ -122,7 +122,6 @@ safe_install "tldr: Collaborative cheatsheets for console commands" "tldr" "yay 
 safe_install "atuin: history shell" "atuin" "yay -S atuin"
 safe_install "trash-cli: alternative for rm" "trash" "yay -S trash-cli"
 safe_install "rclone: drive cmdline tool" "rclone" "yay -S rclone"
-safe_install "just: command runner" "just" "yay -S just"
 
 # following this link to install nix :
 # https://nixos.org/download
