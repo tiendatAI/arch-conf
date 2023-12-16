@@ -13,6 +13,9 @@
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
+    python311
+    nodejs 
+    
     # shell tools
     nushell
     bat # alternative of cat
@@ -46,14 +49,15 @@
     wordnet
 
     # required packages for eaf
-    nodejs wmctrl xdotool
+    wmctrl xdotool
     # eaf-browser
     aria 
   ] ++
     (with pkgs.python311Packages; [
       pandas
       requests
-      sexpdata tld
+      # sexpdata
+      tld
       pyqt6 pyqt6-sip
       pyqt6-webengine epc lxml # for eaf
       qrcode # eaf-file-browser
