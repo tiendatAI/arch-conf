@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    python311
+    # python311
     nodejs 
 
     # shell tools
@@ -41,18 +41,20 @@
     wmctrl xdotool
     # eaf-browser
     aria 
+
+    # test
+    (python311.withPackages (ps: with ps; [
+      pip
+      pandas
+      requests
+      sexpdata
+      tld
+      pyqt6 pyqt6-sip
+      pyqt6-webengine epc lxml # for eaf
+      qrcode # eaf-file-browser
+      pysocks # eaf-browser
+      pymupdf # eaf-pdf-viewer
+      pypinyin # eaf-file-manager
+    ]))
   ];
-  # ] ++
-  #   (with pkgs.python311Packages; [
-  #     pandas
-  #     requests
-  #     # sexpdata
-  #     tld
-  #     pyqt6 pyqt6-sip
-  #     pyqt6-webengine epc lxml # for eaf
-  #     qrcode # eaf-file-browser
-  #     pysocks # eaf-browser
-  #     pymupdf # eaf-pdf-viewer
-  #     pypinyin # eaf-file-manager
-  #   ]);
 }
