@@ -25,10 +25,6 @@ cp ./v3-background-dark.jpg ~/.config/HyprV/backgrounds/
 cp ./hyprland/hyprland.conf ~/.config/hypr/
 
 
-############# reconfig zellij ############
-cp -r ./zellij/ ~/.config/
-
-
 ############# reconfig kitty ############
 cp -r ./kitty ~/.config/
 
