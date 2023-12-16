@@ -44,7 +44,23 @@
     mpd
     mpc-cli
     wordnet
-  ];
+
+    # required packages for eaf
+    nodejs wmctrl xdotool
+    # eaf-browser
+    aria 
+  ] ++
+    (with pkgs.python311Packages; [
+      pandas
+      requests
+      sexpdata tld
+      pyqt6 pyqt6-sip
+      pyqt6-webengine epc lxml # for eaf
+      qrcode # eaf-file-browser
+      pysocks # eaf-browser
+      pymupdf # eaf-pdf-viewer
+      pypinyin # eaf-file-manager
+    ]);
 
   home.file = {
   };
