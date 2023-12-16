@@ -26,14 +26,6 @@
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
 
-;; ;; centaur-tabs
-;; (setq centaur-tabs-mode t
-;;       centaur-tabs-style "wave"
-;;       centaur-tabs-set-bar 'right
-;;       centaur-tabs-modified-marker "●"
-;;       centaur-tabs-label-fixed-length 12
-;;       )
-
 ;; turn off pomodoro sound
 (setq pomidor-sound-tick nil
       pomidor-sound-tack nil)
@@ -106,6 +98,6 @@
 (add-hook 'rust-mode-hook 'hs-minor-mode)
 (add-hook 'rust-mode-hook 'hs-hide-all)
 
-;; open vterm in right, not bottom
-(after! vterm
-  (set-popup-rule! "^\\*vterm" :side 'right :size 0.4 :select t))
+;; open eww in right, not bottom
+(after! eww
+  (set-popup-rule! "^\\*eww" :side 'right :size 0.5 :select t))
