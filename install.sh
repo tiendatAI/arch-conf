@@ -5,34 +5,11 @@
 # astro nvim(for chad)
 # doom emacs (for better chad)
 # nerd fonts
-# catppuncin
-# And reconfig starship
 #
 # desktop apps:
 # +office
 # +spotify
 # +discord
-#
-# Additional packages for emacs:
-# cmake
-# language-tools
-# hunspell
-# mpd
-# mpc
-# dictd
-#
-# Add more some shell tools:
-# bat 
-# fd
-# zoxide
-# zellij
-# ripgrep
-# exa 
-# fuck
-# dust
-# Ag
-# tldr
-# trash-cli
 
 # function to install almost packages
 safe_install() {
@@ -73,13 +50,6 @@ git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 safe_install "emacs: better text editor" "emacs" "yay -S emacs-nativecomp"
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
-
-
-############ catppuccin ############
-#starship
-git clone https://github.com/catppuccin/starship.git temp
-cd ./temp/ && cp ./starship.toml ~/.config/ && cd ../
-rm -rf temp
 
 
 ############ desktop apps ############
