@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    # python311
     nodejs 
 
     # shell tools
@@ -20,7 +19,7 @@
     atuin # history shell
     trash-cli # alternative for rm
     rclone # drive cmdline tool
-
+    neofetch # system info script
 
     # config editors
     neovim
@@ -42,19 +41,8 @@
     # eaf-browser
     aria 
 
-    # test
+    # python with packages
     (python311.withPackages (ps: with ps; [
-      pip
-      pandas
-      requests
-      sexpdata
-      tld
-      pyqt6 pyqt6-sip
-      pyqt6-webengine epc lxml # for eaf
-      qrcode # eaf-file-browser
-      pysocks # eaf-browser
-      pymupdf # eaf-pdf-viewer
-      pypinyin # eaf-file-manager
     ]))
   ];
 }

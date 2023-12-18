@@ -126,11 +126,6 @@ $env.config = {
 # avoid use rm
 alias rm = echo "This is not the command you are looking for."; false
 
-#nvim
-# def vim [] { nvim }
-# def vi [] { nvim }
-# def nv [] { nvim }
-
 #thefuck
 alias fuck = with-env {TF_ALIAS: "fuck", PYTHONIOENCODING: "utf-8"} {
   thefuck (history | last 1 | get command.0)
@@ -145,7 +140,6 @@ source ~/.local/share/atuin/init.nu
 
 # add to PATH
 $env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin")
-# $env.PATH = ($env.PATH | split row (char esep))
 
 #zoxide
 source ~/.zoxide.nu
