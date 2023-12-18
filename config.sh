@@ -16,15 +16,12 @@ mkdir ~/.local/share/atuin/
 atuin init nu | save ~/.local/share/atuin/init.nu
 
 
-############ reconfig hyprland ############
-# uncomment this to use fullscreen feature
-cp ./hyprland/hyprland.conf ~/.config/hypr/
+# rebiding keys
+cp ./keybindings/custom.conf ~/dotfiles/hypr/conf/keybindings/
 
 
 #requirement steps
-# uncomment for coppy config file
-cp ./home-manager/nushell/config.nu ~/.config/nushell
-cp ./home-manager/bash/.bashrc ~/
+cp ./home-manager/ ~/.config/
 
 # spelling
 mkdir -p ~/Library/Spelling/  
@@ -33,4 +30,7 @@ cp ./dicts/en_US/* ~/Library/Spelling
 #SUDO
 # firefox config
 sudo cp -r ./firefox/ /etc/
+
+# enable bluetooth
+sudo systemctl start bluetooth
 
