@@ -9,6 +9,36 @@
 (package! beacon)
 
 
+;; packages for org
+;; notification on org
+(package! org-alert)
+
+;; org ai for chatGPT
+(package! org-ai)
+
+;; code rust in org mode
+(package! ob-rust)
+
+;; download image from internet
+(package! org-download)
+
+;; beter org-roam
+(package! org-roam-ui)
+
+;;insert content of text with a link
+(package! org-transclusion)
+
+;; better agenda
+(package! org-super-agenda)
+(package! org-timeblock)
+
+;; kaban board for project planning
+(package! org-kanban)
+
+;; diagram in org-mode
+(package! ob-mermaid)
+
+
 ;; better pdf tools
 (package! pdf-tools :recipe
   (:host github
@@ -51,31 +81,5 @@
 (package! comment-tags )
 
 
-;; packages for org
-;; notification on org
-(package! org-alert)
-
-;; org ai for chatGPT
-(package! org-ai)
-
-;; code rust in org mode
-(package! ob-rust)
-
-;; download image from internet
-(package! org-download)
-
-;; beter org-roam
-(package! org-roam-ui)
-
-;;insert content of text with a link
-(package! org-transclusion)
-
-;; better agenda
-(package! org-super-agenda)
-(package! org-timeblock)
-
-;; kaban board for project planning
-(package! org-kanban)
-
-;; diagram in org-mode
-(package! ob-mermaid)
+;; better eww
+(package! imenu-list)
