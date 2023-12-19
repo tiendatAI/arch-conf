@@ -1,14 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; $DOOMDIR/packages.el
 
-;; customize theme
-(package! catppuccin-theme)
-
-
-;; cursor
-(package! beacon)
-
-
 ;; packages for org
 ;; notification on org
 (package! org-alert)
@@ -37,6 +29,14 @@
 
 ;; diagram in org-mode
 (package! ob-mermaid)
+
+
+;; customize theme
+(package! catppuccin-theme)
+
+
+;; cursor
+(package! beacon)
 
 
 ;; better pdf tools
@@ -81,5 +81,5 @@
 (package! comment-tags )
 
 
-;; better eww
+;; show current buffer's imenu entries
 (package! imenu-list)

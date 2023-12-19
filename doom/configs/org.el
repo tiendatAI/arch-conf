@@ -41,5 +41,3 @@
    (python . t)
    ))
 
-;; enable fold when open new file
-(setq org-startup-folded 'content)
