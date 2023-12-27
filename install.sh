@@ -55,6 +55,5 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ############ desktop apps ############
 safe_install "discord" "discord" "yay -S discord"
 safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -S wl-gammarelay"
-safe_install "thunderbird" "thunderbird " "yay -S thunderbird"
 
 
