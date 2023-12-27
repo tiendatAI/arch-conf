@@ -11,20 +11,19 @@ cp -r ./doom/ ~/.config/
 echo "zoxide init nushell | save -f ~/.zoxide.nu" >> ~/.config/nushell/env.nu
 
 
-# #requirement step for atuin
+#requirement step for atuin
 mkdir ~/.local/share/atuin/
 atuin init nu | save ~/.local/share/atuin/init.nu
 
 
 # rebiding keys
-cp ./keybindings/custom.conf ~/dotfiles/hypr/conf/keybindings/
-
+cp -r ./dotfiles/ ~/
 
 #requirement steps
-cp ./home-manager/ ~/.config/
+cp -r ./home-manager/ ~/.config/
 
 # spelling
-mkdir -p ~/Library/Spelling/  
+mkdir ~/Library/Spelling/  
 cp ./dicts/en_US/* ~/Library/Spelling
 
 #SUDO

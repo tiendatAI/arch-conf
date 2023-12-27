@@ -1,0 +1,10 @@
+#
+# ~/.bashrc
+#
+
+eval "$(starship init bash)"
+
+if command -v nu &> /dev/null; then 
+  exec nu 
+fi
+

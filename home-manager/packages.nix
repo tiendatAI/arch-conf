@@ -22,7 +22,7 @@
     neofetch # system info script
 
     # config editors
-    neovim
+    # neovim
     # required packages
     lazygit
 
@@ -35,11 +35,6 @@
     mpd
     mpc-cli
     wordnet
-
-    # required packages for eaf
-    wmctrl xdotool
-    # eaf-browser
-    aria 
 
     # python with packages
     (python311.withPackages (ps: with ps; [
