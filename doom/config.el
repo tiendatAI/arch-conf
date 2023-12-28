@@ -12,7 +12,6 @@
 
 (setq doom-theme 'catppuccin)
 
-(setq display-line-numbers-type 'relative)
 
 ;; load other configs
 (mapc 'load (file-expand-wildcards "~/.config/doom/configs/*.el"))
@@ -22,17 +21,9 @@
   (package-install 'nerd-icons))
 
 ;; default path
-(setq projectile-project-search-path '("~/workplaces/"))
+(setq projectile-project-search-path '("~/codebases/"))
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
-
-;; turn off pomodoro sound
-(setq pomidor-sound-tick nil
-      pomidor-sound-tack nil)
-
-;; pdf tools
-(require 'saveplace-pdf-view)
-(save-place-mode 1)
 
 ;; disable mouse
 (require 'disable-mouse)
@@ -59,45 +50,5 @@
 (setq default-input-method "vietnamese-telex")
 (setq scroll-margin 5)
 (setq projectile-indexing-method 'alien)
-
-;; remote with HPC
+(setq display-line-numbers-type 'relative)
 (setq tramp-default-method "ssh")
-
-;; google translate
-(require 'google-translate)
-(require 'google-translate-smooth-ui)
-(global-set-key "\C-ct" 'google-translate-smooth-translate)
-(setq google-translate-translation-directions-alist '(("en" . "en")("en" . "vi")("vi" . "en")))
-(setq google-translate-preferable-input-methods-alist '((nil . ("en"))
-                                                        (vietnamese-telex . ("vi"))))
-
-;; Trigger completion immediately.
-(setq company-idle-delay 0)
-
-;; lsp config
-(with-eval-after-load 'lsp-mode
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.devenv\\'")
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.direnv\\'")
-  ;; or
-  ;; (add-to-list 'lsp-file-watch-ignored-files "[/\\\\]\\.my-files\\'")
-  )
-
-;; debugger
-(after! dap-mode
-  (setq dap-python-debugger 'debugpy))
-
-;; enable fold when open new file
-(setq org-startup-folded 'content)
-;; python
-(add-hook 'python-mode-hook 'hs-minor-mode)
-(add-hook 'python-mode-hook 'hs-hide-all)
-;; C
-(add-hook 'c-mode-hook 'hs-minor-mode)
-(add-hook 'c-mode-hook 'hs-hide-all)
-;; rust
-(add-hook 'rust-mode-hook 'hs-minor-mode)
-(add-hook 'rust-mode-hook 'hs-hide-all)
-
-;; open eww in right, not bottom
-(after! eww
-  (set-popup-rule! "^\\*eww" :side 'right :size 0.5 :select t))

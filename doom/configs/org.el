@@ -8,15 +8,6 @@
 (setq ob-mermaid-cli-path "/nix/store/6jly5h71i8rgv2yx63c1qrc29g36nk3s-_at_mermaid-js_slash_mermaid-cli-10.2.4/bin/mmdc") ;; bad practice
 ;; (setq ob-mermaid-cli-path (shell-command-to-string "which mmdc"))
 
-;; record time I actually work
-(defun my-reset-org-clock ()
-  "Reset all org-mode clocks at midnight."
-  (interactive)
-  (save-excursion
-    (org-clock-reset)
-    (org-save-all-org-buffers)))
-(run-at-time "24:00" nil #'my-reset-org-clock)
-
 ;; org notification
 (require 'org-alert)
 (setq alert-default-style 'libnotify)
@@ -41,3 +32,5 @@
    (python . t)
    ))
 
+;; enable fold when open new file
+(setq org-startup-folded 'content)
