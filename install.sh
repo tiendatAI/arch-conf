@@ -34,8 +34,8 @@ safe_install() {
 # https://nix-community.github.io/home-manager/index.html#sec-install-standalone
 
 #some good fonts
-#yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
-#yay -S ttf-intel-one-mono ttf-nerd-fonts-symbols
+#yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-nerd-fonts-symbols
+#yay -S ttf-intel-one-mono
 
 
 # nvim
