@@ -31,7 +31,7 @@ safe_install() {
 
 # following this link to install nix :
 # https://nixos.org/download
-# https://nix-community.github.io/home-manager/index.html#sec-install-standalone
+# https://nix-community.github.io/home-manager/index.html
 
 #some good fonts
 #yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-nerd-fonts-symbols
