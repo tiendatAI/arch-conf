@@ -1,10 +1,10 @@
-(setq org-directory "~/org/")
-(setq org-roam-directory "~/org/roam/")
-(setq org-agenda-files '( "~/org/TODO/every-day.org"
-                          "~/org/TODO/long-term.org"
-                          "~/org/TODO/tracking-habit.org" ))
-(setq org-noter-notes-search-path '("~/org/noter/"))
-(setq org-journal-dir "~/org/journal/")
+(setq org-directory "~/Documents/org")
+(setq org-roam-directory "~/Documents/org/roam/")
+(setq org-agenda-files '( "~/Documents/org/TODO/every-day.org"
+                          "~/Documents/org/TODO/long-term.org"
+                          "~/Documents/org/TODO/tracking-habit.org" ))
+(setq org-noter-notes-search-path '("~/Documents/org/noter/"))
+(setq org-journal-dir "~/Documents/org/journal/")
 (setq ob-mermaid-cli-path "/nix/store/6jly5h71i8rgv2yx63c1qrc29g36nk3s-_at_mermaid-js_slash_mermaid-cli-10.2.4/bin/mmdc") ;; bad practice
 ;; (setq ob-mermaid-cli-path (shell-command-to-string "which mmdc"))
 

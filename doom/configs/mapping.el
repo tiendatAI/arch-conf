@@ -5,9 +5,6 @@
        )
       )
 ;; custom binding
-;; (map! "M-[" #'centaur-tabs-backward
-;;       "M-]" #'centaur-tabs-forward)
-;; (map! "M-]" #'evil-goto-definition)
 
 ;; binding pomodoro
 (global-set-key (kbd "<f12>") #'pomidor)
@@ -17,3 +14,6 @@
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+;; imenu-list
+(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)

@@ -13,13 +13,6 @@
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
 
-;; hiding code
-;; python
-(add-hook 'python-mode-hook 'hs-minor-mode)
-(add-hook 'python-mode-hook 'hs-hide-all)
-;; C
-(add-hook 'c-mode-hook 'hs-minor-mode)
-(add-hook 'c-mode-hook 'hs-hide-all)
-;; rust
-(add-hook 'rust-mode-hook 'hs-minor-mode)
-(add-hook 'rust-mode-hook 'hs-hide-all)
+;; imenu-list
+(setq imenu-list-focus-after-activation t)
+(setq imenu-list-auto-resize t)
