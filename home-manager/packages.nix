@@ -2,7 +2,10 @@
 
 {
   home.packages = with pkgs; [
-    nodejs 
+    # nodejs 
+    # python global
+    # (python310.withPackages (ps: with ps; [
+    # ]))
 
     # shell tools
     nushell
@@ -22,7 +25,6 @@
     neofetch # system info script
 
     # config editors
-    # neovim
     # required packages
     lazygit
 
@@ -35,9 +37,5 @@
     mpd
     mpc-cli
     wordnet
-
-    # python with packages
-    (python311.withPackages (ps: with ps; [
-    ]))
   ];
 }
