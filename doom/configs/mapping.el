@@ -1,7 +1,7 @@
-;; add quick open files
+;; quick open files
 (map! :leader
       (:prefix ("=" . "open file")
-       :desc "Open cheat-sheet file" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
+       :desc "Cheat-sheet" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
        )
       )
 ;; custom binding
@@ -17,3 +17,10 @@
 
 ;; imenu-list
 (global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
+
+;; consult (telescope of emacs)
+(map! :leader
+      (:prefix ("f")
+       :desc "Consult-find" "f" #'consult-find
+       :desc "Consult-grep" "w" #'consult-grep
+       ))
