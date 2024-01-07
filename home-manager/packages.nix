@@ -7,8 +7,7 @@
     # (python310.withPackages (ps: with ps; [
     # ]))
 
-    # shell tools
-    nushell
+    nushell # mordern shell
     bat # alternative of cat
     fd # alternative of find
     zoxide # alternative of cd

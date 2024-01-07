@@ -144,4 +144,9 @@ $env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin")
 #zoxide
 source ~/.zoxide.nu
 
-
+### additional alias
+alias c = clear
+alias v = nvim
+alias wifi = nmtui
+alias bt = blueman-manager  
+alias e = exit
