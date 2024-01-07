@@ -42,8 +42,6 @@
 
 ;; default settings
 (beacon-mode 1)
-(display-time-mode 1)
-(display-battery-mode 1)
 (setq hl-todo-mode t)
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
@@ -52,3 +50,4 @@
 (setq projectile-indexing-method 'alien)
 (setq display-line-numbers-type 'relative)
 (setq tramp-default-method "ssh")
+

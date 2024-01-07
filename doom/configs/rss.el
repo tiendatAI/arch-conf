@@ -1,3 +1,5 @@
+;;; configs/rss.el -*- lexical-binding: t; -*-
+
 ;; some config of rss
 (after! elfeed
   (setq elfeed-search-filter "@1-year-ago +unread"))

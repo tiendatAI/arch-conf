@@ -1,3 +1,5 @@
+;;; configs/indent-guides.el -*- lexical-binding: t; -*-
+
 ;; indent-guides
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'text-mode-hook 'highlight-indent-guides-mode)

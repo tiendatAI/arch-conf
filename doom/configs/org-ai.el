@@ -1,3 +1,5 @@
+;;; configs/org-ai.el -*- lexical-binding: t; -*-
+
 (use-package org-ai
   :ensure t
   :commands (org-ai-mode

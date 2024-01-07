@@ -1,3 +1,5 @@
+;;; configs/google-translate.el -*- lexical-binding: t; -*-
+
 ;; google translate
 (require 'google-translate)
 (require 'google-translate-smooth-ui)

@@ -1,3 +1,5 @@
+;;; configs/programming.el -*- lexical-binding: t; -*-
+
 ;; Trigger completion immediately.
 (setq company-idle-delay 0)
 

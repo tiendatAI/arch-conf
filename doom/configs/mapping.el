@@ -1,3 +1,5 @@
+;;; configs/mapping.el -*- lexical-binding: t; -*-
+
 ;; quick open files
 (map! :leader
       (:prefix ("=" . "open file")

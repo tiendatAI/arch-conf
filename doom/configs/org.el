@@ -1,3 +1,5 @@
+;;; configs/org.el -*- lexical-binding: t; -*-
+
 (setq org-directory "~/Documents/org")
 (setq org-roam-directory "~/Documents/org/roam/")
 (setq org-agenda-files '( "~/Documents/org/TODO/every-day.org"

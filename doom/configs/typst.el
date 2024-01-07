@@ -1,3 +1,5 @@
+;;; configs/typst.el -*- lexical-binding: t; -*-
+
 ;; add typst
 (setq treesit-extra-load-path '("~/.config/emacs/tree-sitter"))
 (setq typst-ts-mode-watch-options "--open")
