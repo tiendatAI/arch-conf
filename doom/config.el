@@ -21,7 +21,7 @@
   (package-install 'nerd-icons))
 
 ;; default path
-(setq projectile-project-search-path '("~/codebases/"))
+(setq projectile-project-search-path '("~/Documents/"))
 (setq delete-by-moving-to-trash t
       trash-directory "~/.local/share/Trash/files/")
 
