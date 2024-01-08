@@ -156,6 +156,7 @@ alias j = joshuto
 alias wifi = nmtui
 alias bt = blueman-manager  
 alias e = exit
+alias lt = exa -l -T
 
 # -----------------------------------------------------
 # GIT
