@@ -121,17 +121,19 @@ $env.config = {
 }
 
 
-### add more config
+# -----------------------------------------------------
+# ADD MORE CONFIG
+# -----------------------------------------------------
 
 # avoid use rm
 alias rm = echo "This is not the command you are looking for."; false
 
-#thefuck
+# thefuck
 alias fuck = with-env {TF_ALIAS: "fuck", PYTHONIOENCODING: "utf-8"} {
   thefuck (history | last 1 | get command.0)
 }
 
-#atuin
+# atuin
 $env.config = {
     show_banner: false
     keybindings: []
@@ -141,13 +143,29 @@ source ~/.local/share/atuin/init.nu
 # add to PATH
 $env.PATH = ($env.PATH | split row (char esep) | append "~/.config/emacs/bin")
 
-#zoxide
+# zoxide
 source ~/.zoxide.nu
 
-### additional alias
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
 alias c = clear
 alias v = nvim
 alias j = joshuto
 alias wifi = nmtui
 alias bt = blueman-manager  
 alias e = exit
+
+# -----------------------------------------------------
+# GIT
+# -----------------------------------------------------
+
+alias gs = git status
+alias ga = git add
+alias gc = git commit -m
+alias gp = git push
+alias gpl = git pull
+alias gst = git stash
+# alias gsp = git stash; git pull
+alias gcheck = git checkout
