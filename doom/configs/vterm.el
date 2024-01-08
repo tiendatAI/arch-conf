@@ -13,3 +13,6 @@
                (reusable-frames . visible)
                (window-width . 0.5)))
 
+;; vterm popup
+(after! vterm
+  (set-popup-rule! "^\\*vterm" :side 'right :size 0.5 :select t))

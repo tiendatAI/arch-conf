@@ -4,10 +4,10 @@
 (after! eww
   (set-popup-rule! "^\\*eww" :side 'right :size 0.5 :select t))
 
+
+;; eww without images
 (with-eval-after-load 'eww
-
   (setq-local endless/display-images t)
-
   (defun endless/toggle-image-display ()
     "Toggle images display on current buffer."
     (interactive)
@@ -56,3 +56,4 @@ buffer."
   (setq-default shr-use-fonts nil)      ; toggle with `F`
 
   );end with eveal after load eww
+
