@@ -35,5 +35,5 @@
 ;; vterm rebinding for open in right side
 (map! :leader
       (:prefix ("o")
-       :desc "Open vterm side" "t" #'vterm
+       :desc "Open vterm side" "t" #'vterm-toggle
        ))
