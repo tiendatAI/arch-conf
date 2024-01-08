@@ -1,13 +1,5 @@
 ;;; configs/mapping.el -*- lexical-binding: t; -*-
 
-;; quick open files
-(map! :leader
-      (:prefix ("=" . "open file")
-       :desc "Cheat-sheet" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
-       )
-      )
-;; custom binding
-
 ;; binding pomodoro
 (global-set-key (kbd "<f12>") #'pomidor)
 
@@ -25,4 +17,17 @@
       (:prefix ("f")
        :desc "Consult-find" "f" #'consult-find
        :desc "Consult-grep" "w" #'consult-grep
+       ))
+
+;; quick open files
+(map! :leader
+      (:prefix ("=" . "Open file")
+       :desc "Cheat-sheet" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
+       )
+      )
+
+;; eww
+(map! :leader
+      (:prefix ("e". "Emacs Web Wowser")
+       :desc "eww" "e" #'eww
        ))
