@@ -83,3 +83,9 @@
 
 ;; show current buffer's imenu entries
 (package! imenu-list)
+
+
+;; cross-platform embedded
+(package! platformio-mode)
+
+

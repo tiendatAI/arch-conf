@@ -31,3 +31,9 @@
       (:prefix ("e". "Emacs Web Wowser")
        :desc "eww" "e" #'eww
        ))
+
+;; vterm rebinding for open in right side
+(map! :leader
+      (:prefix ("o")
+       :desc "Open vterm side" "t" #'vterm
+       ))
