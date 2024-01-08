@@ -29,7 +29,6 @@
 
     # main editors
     # required packages
-    cmake
     fzf
     languagetool
     hunspell
