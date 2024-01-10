@@ -12,6 +12,15 @@
 ;; imenu-list
 (global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
 
+;; split window using edwina
+(defun edwina-split-window ()
+  (interactive)
+  (evil-split-buffer nil)
+  (edwina-arrange)
+  (edwina-swap-next-window)
+  )
+
+
 (map! :leader
       ;; consult (telescope of emacs)
       (:prefix ("f")
@@ -32,6 +41,9 @@
       (:prefix ("j". "My binding functions")
        ;; eww
        :desc "eww" "w" #'eww
+
+       ;; edwina split window
+       :desc "edwina split window" "s" #'edwina-split-window
 
        ;; consult (telescope of emacs)
        (:prefix ("e". "Emms")

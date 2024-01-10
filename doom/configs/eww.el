@@ -4,7 +4,6 @@
 (after! eww
   (set-popup-rule! "^\\*eww" :side 'right :size 0.5 :select t))
 
-
 ;; eww without images
 (with-eval-after-load 'eww
   (setq-local endless/display-images t)
@@ -17,11 +16,11 @@
 
   (defun endless/backup-display-property (invert &optional object)
     "Move the 'display property at POS to 'display-backup.
-Only applies if display property is an image.
-If INVERT is non-nil, move from 'display-backup to 'display
-instead.
-Optional OBJECT specifies the string or buffer. Nil means current
-buffer."
+     Only applies if display property is an image.
+     If INVERT is non-nil, move from 'display-backup to 'display
+     instead.
+     Optional OBJECT specifies the string or buffer. Nil means current
+     buffer."
     (let* ((inhibit-read-only t)
            (from (if invert 'display-backup 'display))
            (to (if invert 'display 'display-backup))
