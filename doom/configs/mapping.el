@@ -12,28 +12,32 @@
 ;; imenu-list
 (global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
 
-;; consult (telescope of emacs)
 (map! :leader
+      ;; consult (telescope of emacs)
       (:prefix ("f")
        :desc "Consult-find" "f" #'consult-find
        :desc "Consult-grep" "w" #'consult-grep
-       ))
-
-;; quick open files
-(map! :leader
-      (:prefix ("=" . "Open file")
-       :desc "Cheat-sheet" "=" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
        )
-      )
 
-;; eww
-(map! :leader
-      (:prefix ("e". "Emacs Web Wowser")
-       :desc "eww" "e" #'eww
-       ))
-
-;; vterm rebinding for open in right side
-(map! :leader
+      ;; vterm rebinding for open in right side
       (:prefix ("o")
        :desc "Open vterm side" "t" #'vterm-toggle
-       ))
+       )
+
+      ;; quick open files
+      (:prefix ("=" . "Open file")
+       :desc "Cheat-sheet" "c" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))
+       )
+
+      (:prefix ("j". "My binding functions")
+       ;; eww
+       :desc "eww" "w" #'eww
+
+       ;; consult (telescope of emacs)
+       (:prefix ("e". "Emms")
+        :desc "emms-add-file" "a" #'emms-add-file
+        :desc "emms-start" "s" #'emms-start
+        :desc "emms-mode-line-disable" "m" #'emms-mode-line-disable
+        )
+       )
+      )
