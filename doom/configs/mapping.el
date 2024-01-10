@@ -28,11 +28,6 @@
        :desc "Consult-grep" "w" #'consult-grep
        )
 
-      ;; vterm rebinding for open in right side
-      (:prefix ("o")
-       :desc "Open vterm side" "t" #'vterm-toggle
-       )
-
       ;; quick open files
       (:prefix ("=" . "Open file")
        :desc "Cheat-sheet" "c" #'(lambda () (interactive) (find-file-read-only "~/.config/doom/cheat-sheet/README.org"))

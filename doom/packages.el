@@ -70,7 +70,6 @@
 (package! platformio-mode)
 
 ;; vterm toggle in righ-side
-(package! vterm-toggle)
 (package! multi-vterm)
 
 ;; window mangager
