@@ -20,8 +20,22 @@
   (edwina-swap-next-window)
   )
 
+(defun create-vtem-buffer ()
+  "Create new vterm buffer, for multiple vterm"
+  (interactive)
+  (multi-vterm)
+  (evil-split-buffer nil)
+  (edwina-arrange)
+  (other-window 1)
+  )
+
 
 (map! :leader
+      ;; rebinding vterm
+      (:prefix ("o")
+       :desc "multi-vterm-dedicated-toggle" "T" #'multi-vterm-dedicated-toggle
+       )
+
       ;; consult (telescope of emacs)
       (:prefix ("f")
        :desc "Consult-find" "f" #'consult-find
