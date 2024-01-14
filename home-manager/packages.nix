@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    # nodejs 
     # python global
     # (python310.withPackages (ps: with ps; [
     # ]))
@@ -35,5 +34,7 @@
     mpd
     mpc-cli
     wordnet
+    nodejs 
+    libvterm
   ];
 }

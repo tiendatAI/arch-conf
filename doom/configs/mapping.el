@@ -12,6 +12,9 @@
 ;; imenu-list
 (global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
 
+;; company for file path
+(global-set-key (kbd "C-.") #'company-files)
+
 (defun edwina-split-window ()
   "Split window using edwina"
   (interactive)
@@ -54,6 +57,9 @@
        :desc "multi-vterm-dedicated-toggle" "T" #'multi-vterm-dedicated-toggle
        )
 
+      ;; rebining for comment
+      :desc "comment" "/" #'comment-line
+
       ;; consult (telescope of emacs)
       (:prefix ("f")
        :desc "Consult-find" "f" #'consult-find
@@ -69,16 +75,7 @@
       (:prefix ("j". "My binding functions")
        ;; eww
        :desc "eww" "w" #'eww
-
        ;; edwina split window
        :desc "edwina split window" "s" #'edwina-split-window
-
-       ;; consult (telescope of emacs)
-       (:prefix ("e". "Emms")
-        :desc "emms-add-file" "a" #'emms-add-file
-        :desc "emms-start" "s" #'emms-start
-        :desc "emms-mode-line-disable" "m" #'emms-mode-line-disable
-        )
        )
-
       )
