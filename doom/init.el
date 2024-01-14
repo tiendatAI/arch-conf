@@ -162,7 +162,6 @@
        (org                 ; organize your plain life in plain text
         +journal
         +noter
-        +present
         +pretty
         +roam2              ; better manager
         )
