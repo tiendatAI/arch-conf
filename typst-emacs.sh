@@ -26,3 +26,4 @@ fi
 # Should remove folder after cp .so file
 mkdir ~/.config/emacs/tree-sitter
 cp libtree-sitter-typst.so ~/.config/emacs/tree-sitter
+trash-put tree-sitter-typst
