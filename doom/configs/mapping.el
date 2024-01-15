@@ -32,6 +32,26 @@
   (other-window 1)
   )
 
+(defun delete-window-below ()
+  "Delete the window below, ignoring errors when moving down."
+  (interactive)
+  (condition-case nil
+      (progn
+        (evil-window-down nil) ; Attempt to move down
+        (delete-window))       ; Delete the current window
+    (error
+     (delete-window))))         ; If error, delete the current window anyway
+
+(defun delete-window-above ()
+  "Delete the window above, ignoring errors when moving down."
+  (interactive)
+  (condition-case nil
+      (progn
+        (evil-window-up nil) ; Attempt to move down
+        (delete-window))       ; Delete the current window
+    (error
+     (delete-window))))         ; If error, delete the current window anyway
+
 (defun open-specific-file (file-path)
   "Open a specific file with the given path"
   (interactive "fEnter file path: ")
@@ -77,5 +97,9 @@
        :desc "eww" "w" #'eww
        ;; edwina split window
        :desc "edwina split window" "s" #'edwina-split-window
+
+       ;; quick delete window
+       :desc "delete-window-below" "j" #'delete-window-below
+       :desc "delete-window-above" "k" #'delete-window-above
        )
       )
