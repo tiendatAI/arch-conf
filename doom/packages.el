@@ -38,3 +38,6 @@
 
 ;; window mangager
 (package! edwina)
+
+;; engine mode for quick search
+(package! engine-mode)

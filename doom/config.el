@@ -34,12 +34,6 @@
             evil-visual-state-map
             evil-insert-state-map))
 
-;; duckduckgo
-(setq load-path (cons "~/.config/doom/configs/duckduckgo" load-path))
-(require 'ddg)
-(require 'ddg-search)
-(require 'ddg-mode)
-
 ;; default settings
 (beacon-mode 1)
 (setq hl-todo-mode t)
