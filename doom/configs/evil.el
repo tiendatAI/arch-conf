@@ -1,6 +1,6 @@
 ;;; configs/evil.el -*- lexical-binding: t; -*-
 
-(evil-global-set-key 'insert (kbd "C-l") 'evil-delete-backward-char)
+(evil-global-set-key 'insert (kbd "C-e") 'evil-delete-backward-char)
 
 ;; Match the word under cursor (i.e. make it an edit region). Consecutive presses will
 ;; incrementally add the next unmatched match.
