@@ -7,8 +7,6 @@
                           "~/Documents/org/TODO/tracking-habit.org" ))
 (setq org-noter-notes-search-path '("~/Documents/org/noter/"))
 (setq org-journal-dir "~/Documents/org/journal/")
-(setq ob-mermaid-cli-path "/nix/store/6jly5h71i8rgv2yx63c1qrc29g36nk3s-_at_mermaid-js_slash_mermaid-cli-10.2.4/bin/mmdc") ;; bad practice
-;; (setq ob-mermaid-cli-path (shell-command-to-string "which mmdc"))
 
 ;; org notification
 (require 'org-alert)

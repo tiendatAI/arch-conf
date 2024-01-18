@@ -10,7 +10,7 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 ;; imenu-list
-(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
+(global-set-key (kbd "C-'") #'lsp-ui-imenu)
 
 ;; company for file path
 (global-set-key (kbd "C-.") #'company-files)
@@ -21,15 +21,6 @@
   (evil-split-buffer nil)
   (edwina-arrange)
   (edwina-swap-next-window)
-  )
-
-(defun create-vtem-buffer ()
-  "Create new vterm buffer, for multiple vterm"
-  (interactive)
-  (multi-vterm)
-  (evil-split-buffer nil)
-  (edwina-arrange)
-  (other-window 1)
   )
 
 (defun delete-window-below ()

@@ -15,10 +15,6 @@
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
 
-;; imenu-list
-(setq imenu-list-focus-after-activation t)
-(setq imenu-list-auto-resize t)
-
 ;; platformio embedded
 ;; Enable ccls for all c++ files, and platformio-mode only
 ;; when needed (platformio.ini present in project root).
