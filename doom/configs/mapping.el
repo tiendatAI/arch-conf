@@ -88,7 +88,7 @@
        :desc "eww" "w" #'eww
        ;; edwina split window
        :desc "edwina split window" "s" #'edwina-split-window
-       ;; duckduckgo
+       ;; search-duckduckgo
        :desc "engine/search-duckduckgo" "d" #'engine/search-duckduckgo
 
        ;; quick delete window
