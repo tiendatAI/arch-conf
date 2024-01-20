@@ -3,8 +3,14 @@
 {
   home.packages = with pkgs; [
     # python global
-    # (python310.withPackages (ps: with ps; [
-    # ]))
+    (python311.withPackages (ps: with ps; [
+    ]))
+
+    # rust global
+    rustup
+
+    # gcc global
+    gcc
 
     nushell # mordern shell
     bat # alternative of cat
@@ -23,6 +29,7 @@
     neofetch # system info script
 
     # config editors
+    neovim
     # required packages
     lazygit
 
