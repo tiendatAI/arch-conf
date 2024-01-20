@@ -41,3 +41,6 @@
 
 ;; engine mode for quick search
 (package! engine-mode)
+
+;; better bookmark
+(package! harpoon)
