@@ -69,7 +69,10 @@
        )
 
       ;; rebining for comment
-      :desc "comment" "/" #'comment-line
+      :desc "comment-line" "/" #'comment-line
+
+      ;; rebinding for execute-extended-command
+      :desc "execute-extended-command" ";" #'execute-extended-command
 
       ;; consult (telescope of emacs)
       (:prefix ("f")

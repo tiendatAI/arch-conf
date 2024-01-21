@@ -4,39 +4,37 @@
 
 ;; Use frequently
 (defengine duckduckgo
-  "https://duckduckgo.com/?q=%s"
-  :keybinding "d")
+  "https://duckduckgo.com/?q=%s")
 
 (defengine zalo
-  "https://chat.zalo.me/"
-  :keybinding "z")
+  "https://chat.zalo.me/")
 
 (defengine bard
-  "https://bard.google.com/"
-  :keybinding "b")
+  "https://bard.google.com/")
+
+(defengine rust-docs
+  "https://doc.rust-lang.org/std/index.html?search=%s")
+
+(defengine rust-releases
+  "https://docs.rs/releases/search?query=%s")
+
+(defengine cpp-docs
+  "https://duckduckgo.com/?sites=cppreference.com&q=%s&atb=v410-1&ia=web")
 
 (defengine youtube
-  "https://www.youtube.com/results?aq=f&oq=&search_query=%s"
-  :keybinding "y")
+  "https://www.youtube.com/results?aq=f&oq=&search_query=%s")
 
 (defengine github
-  "https://github.com/search?ref=simplesearch&q=%s"
-  :keybinding "g"
-  )
+  "https://github.com/search?ref=simplesearch&q=%s")
 
 (defengine reddit
-  "https://www.reddit.com/search/?q=%s"
-  :keybinding "r"
-  )
+  "https://www.reddit.com/search/?q=%s")
 
 (defengine stack-overflow
-  "https://stackoverflow.com/search?q=%s"
-  :keybinding "s"
-  )
+  "https://stackoverflow.com/search?q=%s")
 
 (defengine wikipedia
   "https://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s"
-  :keybinding "w"
   :docstring "Searchin' the wikis."
   :browser 'eww-browse-url
   )

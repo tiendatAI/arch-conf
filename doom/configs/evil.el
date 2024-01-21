@@ -13,3 +13,7 @@
 ;; Same as M-d but in reverse.
 (define-key evil-normal-state-map (kbd "M-M") 'evil-multiedit-match-and-prev)
 (define-key evil-visual-state-map (kbd "M-M") 'evil-multiedit-match-and-prev)
+
+;; go to marked position
+;; (define-key evil-normal-state-map "'" 'evil-goto-mark)
+;; (define-key evil-visual-state-map "'" 'evil-goto-mark)
