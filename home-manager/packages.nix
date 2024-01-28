@@ -43,5 +43,6 @@
     wordnet
     nodejs 
     libvterm
+    sqlite # required by roam
   ];
 }

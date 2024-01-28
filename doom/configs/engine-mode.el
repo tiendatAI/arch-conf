@@ -2,7 +2,7 @@
 
 (engine-mode t)
 
-;; Use frequently
+;; frequently sites
 (defengine duckduckgo
   "https://duckduckgo.com/?q=%s")
 
@@ -12,6 +12,7 @@
 (defengine bard
   "https://bard.google.com/")
 
+;; documentations
 (defengine rust-docs
   "https://doc.rust-lang.org/std/index.html?search=%s")
 
@@ -21,6 +22,10 @@
 (defengine cpp-docs
   "https://duckduckgo.com/?sites=cppreference.com&q=%s&atb=v410-1&ia=web")
 
+(defengine python-docs
+  "https://docs.python.org/3/search.html?q=%s")
+
+;; other searchs
 (defengine youtube
   "https://www.youtube.com/results?aq=f&oq=&search_query=%s")
 
