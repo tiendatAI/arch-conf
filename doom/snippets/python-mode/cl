@@ -3,5 +3,8 @@
 # key: cl
 # --
 class ${1:ClassName}(${2:ParentClass}):
-    """${3:Class docstring}
     """
+    ${3:Class docstring}
+    """
+
+    #...

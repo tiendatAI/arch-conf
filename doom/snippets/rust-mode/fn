@@ -2,21 +2,21 @@
 # name: fn
 # key: fn
 # --
-/// ${1:func-des}
+/// ${5:func-des}
 ///
 /// # Arguments
-/// ${2:param1} (`${3:param1_type}`).
-/// ${4:param1} (`${5:param1_type}`).
+/// ${2:param1} (\`${3:param1_type}\`)
+/// ${4:param2} (\`${5:param2_type}\`)
 /// ...
 ///
 /// # Returns
-/// ${6:return} (`${7:return_type}`).
+/// ${6:return} (\`${7:return_type}\`)
 ///
 /// # Examples
-/// ```
-/// ${6:example-des}
-/// ```
+/// \`\`\`
+/// ${8:example_des}
+/// \`\`\`
 ///
-fn ${7:func-name}(${2:param1}: ${3:param1_type}) -> ${7:return_type} {
+fn ${1:func_name}(${2:param1}: ${3:param1_type}) -> ${4:return_type} {
     // ...
 }

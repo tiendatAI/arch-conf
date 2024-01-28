@@ -11,3 +11,5 @@ def ${1:function_name}(${2:args}):
     Returns:
         ${6:return_type}: ${7:Description of return value}
     """
+
+    #...
