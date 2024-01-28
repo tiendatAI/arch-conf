@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: fn
+# key: fn
+# --
+/// ${1:func-des}
+///
+/// # Arguments
+/// ${2:param1} (`${3:param1_type}`).
+/// ${4:param1} (`${5:param1_type}`).
+/// ...
+///
+/// # Returns
+/// ${6:return} (`${7:return_type}`).
+///
+/// # Examples
+/// ```
+/// ${6:example-des}
+/// ```
+///
+fn ${7:func-name}(${2:param1}: ${3:param1_type}) -> ${7:return_type} {
+    // ...
+}

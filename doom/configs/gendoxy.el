@@ -1,5 +1,6 @@
 ;; gendoxy.el --- Generate doxygen documentation from C declarations
 ;;
+;;
 ;; Copyright (C) 2018-2023, Michele Pes, All rights reserved
 ;;
 ;; Author:    Michele Pes <mp81ss@rambler.ru>
