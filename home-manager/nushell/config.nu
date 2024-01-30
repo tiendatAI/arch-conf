@@ -150,6 +150,7 @@ source ~/.zoxide.nu
 # ALIASES
 # -----------------------------------------------------
 
+alias l = ls
 alias c = clear
 alias v = nvim
 alias j = joshuto
