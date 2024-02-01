@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  # allow unfree
+  nixpkgs.config.allowUnfreePredicate = _: true;
+    
   home.packages = with pkgs; [
     # python global
     (python311.withPackages (ps: with ps; [
