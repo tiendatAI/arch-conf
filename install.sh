@@ -53,8 +53,17 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 
 
 ############ desktop apps ############
-safe_install "discord" "discord" "yay -S discord"
-safe_install "wl-gammarelay night light" "wl-gammarelay " "yay -S wl-gammarelay"
-safe_install "virtualbox" "virtualbox" "yay -S virtualbox"
+safe_install "discord: place for better programming" "discord" "yay -S discord"
 
+# nightlight
+safe_install "wl-gammarelay: night light mode" "wl-gammarelay " "yay -S wl-gammarelay"
+
+# install virtual window
+safe_install "virtualbox: other linux in linux" "virtualbox" "yay -S virtualbox"
+
+# some feature not support in emacs
+safe_install "code: fucking bad editor" "code" "yay -S code" 
+
+# 3D-modeling
+safe_install "blender: 3D modeling" "blender" "yay -S blender"
 
