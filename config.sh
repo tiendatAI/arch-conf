@@ -29,7 +29,9 @@ cp ./dicts/en_US/* ~/Library/Spelling
 #SUDO
 # firefox config
 sudo cp -r ./firefox/ /etc/
+# Use this extension for uBlock origin
+# https://christitus.com/remove-youtube-shorts/
 
 # enable bluetooth
-sudo systemctl start bluetooth
+# sudo systemctl start bluetooth
 

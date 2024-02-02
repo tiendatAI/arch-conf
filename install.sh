@@ -25,10 +25,10 @@ safe_install() {
   fi
 }
 
-
+# INSTALL HYPRLAND
+# https://gitlab.com/stephan-raabe/dotfiles
 
 #INSTALL NECESSARY PACKAGES 
-
 # following this link to install nix :
 # https://nixos.org/download
 # https://nix-community.github.io/home-manager/index.html
@@ -60,9 +60,6 @@ safe_install "wl-gammarelay: night light mode" "wl-gammarelay " "yay -S wl-gamma
 
 # install virtual window
 safe_install "virtualbox: other linux in linux" "virtualbox" "yay -S virtualbox"
-
-# some feature not support in emacs
-safe_install "code: fucking bad editor" "code" "yay -S code" 
 
 # 3D-modeling
 safe_install "blender: 3D modeling" "blender" "yay -S blender"
