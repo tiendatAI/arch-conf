@@ -1,2 +1,2 @@
 # arch-conf
-My personal configuration
+I allready move to NixOs
