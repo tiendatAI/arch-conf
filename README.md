@@ -1,2 +1,2 @@
 # arch-conf
-I allready moved to NixOs
+I already moved to NixOs
